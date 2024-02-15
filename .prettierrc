@@ -3,33 +3,5 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "none",
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  "importOrderParserPlugins": [
-    "typescript",
-    "jsx",
-    "classProperties",
-    "decorators-legacy"
-  ],
-  "importOrder": [
-    "^@nestjs(.*)$",
-    "^@generated$",
-    "<THIRD_PARTY_MODULES>",
-    "^@libs/(.*)$",
-    "^@admin/(.*)$",
-    "^@client/(.*)$",
-    "^[./]"
-  ],
-  "overrides": [
-    {
-      "files": "*.hbs",
-      "options": {
-        "parser": "html",
-        "printWidth": 120
-      }
-    }
-  ]
+  "trailingComma": "none"
 }
