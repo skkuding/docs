@@ -6,6 +6,10 @@ export default defineConfig({
   titleTemplate: false,
   lastUpdated: true,
 
+  sitemap: {
+    hostname: 'https://docs.codedang.com'
+  },
+
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
