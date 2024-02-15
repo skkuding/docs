@@ -1,0 +1,31 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**']
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: skkuding/codedang/.github/actions/setup-pnpm@main
+
+      - name: Build documentation
+        run: pnpm docs:build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ap-northeast-2
+
+      - name: Deploy documentation to AWS S3
+        run: |
+          aws s3 sync ./docs/.vitepress/dist s3://docs.codedang.com --region ap-northeast-2
