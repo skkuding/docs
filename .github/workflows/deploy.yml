@@ -27,4 +27,4 @@ jobs:
 
       - name: Deploy documentation to AWS S3
         run: |
-          aws s3 sync ./docs/.vitepress/dist s3://docs.codedang.com --region ap-northeast-2
+          aws s3 sync .vitepress/dist s3://docs.codedang.com --region ap-northeast-2
