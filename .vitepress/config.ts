@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '코드당 문서',
+  title: 'Codedang 코드당',
   description: '코드당 프로젝트의 거의 모든 것을 담은 문서',
   titleTemplate: false,
   lastUpdated: true,
@@ -28,6 +28,12 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true
+      }
+    },
     nav: [
       {
         text: '📌 Guide',
