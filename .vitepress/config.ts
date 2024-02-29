@@ -40,11 +40,11 @@ export default defineConfig({
     },
     nav: [
       {
-        text: '📌 Guide',
+        text: 'Guide',
         link: '/intro/'
       },
       {
-        text: '💡 Demo',
+        text: 'Codedang',
         link: 'https://codedang.com'
       }
     ],
@@ -97,35 +97,20 @@ export default defineConfig({
         ]
       },
       {
-        text: '학생 매뉴얼',
-        items: [
-          {
-            text: 'Main',
-            link: '/user/main'
-          },
-          {
-            text: 'Notice',
-            link: '/user/notice'
-          },
-          { text: 'Contest', link: '/user/contest' },
-          { text: 'Group', link: '/user/group' }
-        ]
-      },
-      {
         text: '관리자 매뉴얼',
         items: [
           {
             text: '가입 및 로그인',
             link: '/group-admin/login'
           },
-          { text: '그룹 및 멤버 관리', link: '/group-admin/group' },
-          { text: '문제 생성 및 관리', link: '/group-admin/problem' },
           {
-            text: 'Notice',
-            link: '/group-admin/notice'
+            text: '그룹 및 멤버 관리',
+            link: '/group-admin/group'
           },
-          { text: 'Contest', link: '/group-admin/contest' },
-          { text: 'Workbook', link: '/group-admin/workbook' }
+          {
+            text: '문제 생성 및 관리',
+            link: '/group-admin/problem'
+          }
         ]
       }
     ]
