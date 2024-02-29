@@ -17,7 +17,7 @@ jobs:
       - uses: skkuding/codedang/.github/actions/setup-pnpm@main
 
       - name: Build documentation
-        run: pnpm docs:build
+        run: pnpm build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
