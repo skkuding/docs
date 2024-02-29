@@ -11,21 +11,20 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     [
       'link',
       {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: ''
+        rel: 'icon',
+        href: '/logo.png'
       }
     ],
     [
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap'
+        as: 'style',
+        crossorigin: '',
+        href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css'
       }
     ]
   ],
@@ -54,11 +53,11 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           {
-            text: 'What is Codedang?',
+            text: '코드당이 뭔가요?',
             link: '/intro/'
           },
           {
-            text: 'Getting Started',
+            text: '시작하기',
             link: '/intro/getting-started'
           },
           {
@@ -66,7 +65,7 @@ export default defineConfig({
             link: 'https://github.com/skkuding/next/blob/main/CONTRIBUTING.md'
           },
           {
-            text: 'API Documentation',
+            text: 'API 문서',
             link: '/intro/bruno'
           }
         ]
@@ -75,19 +74,19 @@ export default defineConfig({
         text: 'Project',
         items: [
           {
-            text: 'Tech Stack',
+            text: '기술 스택',
             link: '/project/tech-stack'
           },
           {
-            text: 'Hierarchy',
+            text: '프로젝트 구조',
             link: '/project/hierarchy'
           },
           {
-            text: 'How Deployments Work',
+            text: '배포 과정',
             link: '/project/deploy'
           },
           {
-            text: 'Stage Server',
+            text: 'Staging vs Production',
             link: '/project/stage-server'
           },
           {

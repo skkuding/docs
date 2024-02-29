@@ -3,9 +3,10 @@
   --c-blue-dark: #2e6de9;
   --c-blue-light: #4d9dfc;
 
-  --vp-font-family-base: 'Inter var experimental', 'Inter var', 'Noto Sans KR',
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-base: 'Inter var experimental', 'Inter var',
+    'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: var(--c-blue);
