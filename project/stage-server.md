@@ -2,7 +2,7 @@
 
 스테이지 서버는 배포 전 테스트를 위한 서버로, [dev.codedang.com](https://dev.codedang.com/)에서 확인할 수 있습니다.
 
-![배포 과정](./deploy-pipeline.png)
+![배포 과정](assets/deploy-pipeline.png)
 
 `main` 브랜치에 올라간 코드는 `deployment` environment에서 자동으로 스테이지 서버에 배포되며,
 수동으로 production 배포를 trigger하면 `production` environment에서 진행합니다.
@@ -63,4 +63,4 @@ GitHub의 codedang repository에서 `Settings` > 좌측 사이드 바 `Actions` 
 
 이후 설명된 내용을 따라 Runner를 등록합니다.
 
-![GitHub Action Runner 등록](./github-actions-runner.png)
+![GitHub Action Runner 등록](assets/github-actions-runner.png)

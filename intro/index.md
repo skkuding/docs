@@ -12,4 +12,4 @@
 스꾸딩 팀 뿐만 아니라 누구나 수정하고 싶은 기능을 건의하고, 심지어 직접 구현할 수 있습니다.
 자세한 내용은 [GitHub에서 확인해보세요.](https://github.com/skkuding) (이슈 & PR은 언제나 환영이에요!)
 
-![코드당](codedang.png)
+![코드당](assets/codedang.png)

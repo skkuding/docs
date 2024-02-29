@@ -2,12 +2,12 @@
 
 Coding Platform은 Frontend, Backend, DevOps 세 팀으로 나누어 프로젝트를 진행합니다.
 
-| 분류 | Stacks |
-|:--------:|-------------|
-| 공통 | Visual Studio Code, GitHub, pnpm, Typescript, ESLint, Prettier, Lefthook |
-| Frontend | Vue.js,  Vite, Tailwind CSS, Pinia, Histoire |
-| Backend | Node.js, Nest.js,  Express, Mocha, Prisma, PostgreSQL, Redis |
-| DevOps | Docker, AWS |
+|   분류   | Stacks                                                                   |
+| :------: | ------------------------------------------------------------------------ |
+|   공통   | Visual Studio Code, GitHub, pnpm, Typescript, ESLint, Prettier, Lefthook |
+| Frontend | Vue.js, Vite, Tailwind CSS, Pinia, Histoire                              |
+| Backend  | Node.js, Nest.js, Express, Mocha, Prisma, PostgreSQL, Redis              |
+|  DevOps  | Docker, AWS                                                              |
 
 ## 공통
 
@@ -17,7 +17,7 @@ Coding Platform은 Frontend, Backend, DevOps 세 팀으로 나누어 프로젝�
 GitHub Issues에 모든 task를 저장하여 스꾸딩 팀의 업무 단위로 활용하고 있고, pull request로 코드 리뷰를 거치며 의견을 교환합니다.
 또한 GitHub Actions로 CI/CD 시스템을 구축하여 테스팅과 배포를 자동화하였습니다.
 
-![GitHub Projects](github-projects.png)
+![GitHub Projects](assets/github-projects.png)
 
 ### pnpm
 
@@ -64,13 +64,13 @@ Frontend framework로 [Vue 3](https://vuejs.org/)을 사용합니다.
 React와 Svelte 등의 대안을 두고 Vue를 사용한 이유는 다음과 같습니다.
 
 - **React**: React는 frontend library 중 가장 큰 커뮤니티를 가지고 있어 자료 검색이나 라이브러리 도입이 쉽다는 장점이 있습니다.
-또한 Next.js라는 훌륭한 SSR/SSG 용 framework도 있고, 채용 시장에서 수요도 제일 많습니다.
-하지만 난이도가 비교적 높아 진입장벽이 높고 Vue에 비해 문법이 직관적이지 못합니다.
-Vue 2에 대해서는 React가 Typescript 지원에서 크게 앞서있었지만, Vue 3에서는 Composition API로 여러 문제가 해결되며 React의 메리트가 줄어들었습니다.
+  또한 Next.js라는 훌륭한 SSR/SSG 용 framework도 있고, 채용 시장에서 수요도 제일 많습니다.
+  하지만 난이도가 비교적 높아 진입장벽이 높고 Vue에 비해 문법이 직관적이지 못합니다.
+  Vue 2에 대해서는 React가 Typescript 지원에서 크게 앞서있었지만, Vue 3에서는 Composition API로 여러 문제가 해결되며 React의 메리트가 줄어들었습니다.
 
 - **Svelte**: Svelte는 신생 frontend library로 매우 직관적인 문법이 특징입니다.
-하지만 신생 라이브러리인 만큼 학습 자료나 라이브러리가 부족하여 개발 경험이 적은 팀원들에게 적합하지 않습니다.
-또한 [자체적으로 설계 문제](https://gist.github.com/rabelais88/19bfe8dfd29d901554389f0a8cc8947a)가 있어 추후 scalable한 운영이 어려울 수 있습니다.
+  하지만 신생 라이브러리인 만큼 학습 자료나 라이브러리가 부족하여 개발 경험이 적은 팀원들에게 적합하지 않습니다.
+  또한 [자체적으로 설계 문제](https://gist.github.com/rabelais88/19bfe8dfd29d901554389f0a8cc8947a)가 있어 추후 scalable한 운영이 어려울 수 있습니다.
 
 기존에 스꾸딩 팀이 QingdaoU OJ 기반의 Online Judge를 구축할 때부터 Vue를 써온 것도 Vue를 택한 이유 중 하나입니다.
 더 상세한 배경은 [issue #8](https://github.com/skkuding/next/issues/8#issuecomment-1065856244)에서 확인할 수 있습니다.
@@ -84,7 +84,7 @@ ES module을 적극적으로 활용하고 dependecies를 esbuild로 bundle하기
 
 - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages): File system 기반의 routing을 자동으로 만들어줍니다.
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons): Iconset들을 쉽게 불러올 수 있는 plugin입니다.
-[Icônes](https://icones.js.org/)에서 아이콘들을 확인할 수 있습니다.
+  [Icônes](https://icones.js.org/)에서 아이콘들을 확인할 수 있습니다.
 
 ### Tailwind CSS
 
@@ -148,7 +148,6 @@ Prisma는 각 model들을 type으로 생성해주기 때문에 Typescript로 쉽
 ### Redis
 
 [Redis](https://redis.io/)는 in-memory 저장소로, 이 프로젝트에서는 주로 caching과 message queue를 위해 쓰입니다. (추후 message queue는 Amazon SQS으로 대체할 수 있습니다)
-
 
 ## DevOps
 

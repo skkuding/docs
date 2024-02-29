@@ -21,7 +21,7 @@ https://www.usebruno.com/downloads
 Bruno를 실행하고 'Open Collection'을 클릭합니다.
 Codedang 폴더에서 collection 폴더의 client 또는 admin을 선택합니다.
 
-![Open Collection](bruno-start.png)
+![Open Collection](assets/bruno-start.png)
 
 ### 3. 환경 변수 설정
 
@@ -30,13 +30,13 @@ Codedang 폴더에서 collection 폴더의 client 또는 admin을 선택합니�
 - Development: 개발 서버 (https://dev.codedang.com)
 - Local: 로컬 서버 (http://localhost)
 
-![Environment](bruno-env.png)
+![Environment](assets/bruno-env.png)
 
 ### 4. 확인
 
 왼쪽 탭에서 request를 선택하여 실행할 수 있습니다. `baseUrl`이 초록색으로 표시되는지 확인해주세요.
 
-![Select](bruno-select.png)
+![Select](assets/bruno-select.png)
 
 ## Convention 🤙
 
@@ -72,9 +72,11 @@ Endpoint마다 'Succeed' request의 'Docs' 탭에 아래 Format을 준수하여 
 
 ```markdown
 ## API 제목
+
 API가 수행하는 역할을 기재합니다.
 
 ### Args / Query / Params / Body
+
 필요한 경우, Args/Query/Params/Body에 대한 설명을 표로 정리합니다.
 이름, 타입, 의미, 기본값, 제약사항을 포함해야 합니다.
 (예)
@@ -85,19 +87,21 @@ API가 수행하는 역할을 기재합니다.
 |problemId|Int|problemId와 contestId중 하나는 반드시 포함한다.|
 |contestId|Int|problemId와 contestId중 하나는 반드시 포함한다.|
 
-
 ### Error Case
+
 API를 호출했을 때 발생 가능한 Error Case의 이름과 설명을 기재합니다.
 Error case의 이름은 실패하는 파일의 이름과 일치시켜주세요.
 이름은 '#' 4개, 설명은 줄글로 작성합니다.
 (예)
+
 #### BAD_USER_INPUT(1)
+
 password가 조건에 맞지 않는 경우.
 ```
 
 ### Scripts
 
-로그인 및 권한이 필요한 request의 경우, Pre Request에서 사전 인증 작업을 수행해주세요. GraphQL의 경우, Admin 계정으로 로그인하는 작업이 전역으로 적용되어 있습니다.  
+로그인 및 권한이 필요한 request의 경우, Pre Request에서 사전 인증 작업을 수행해주세요. GraphQL의 경우, Admin 계정으로 로그인하는 작업이 전역으로 적용되어 있습니다.
 
 ~~Request를 보낼 때 상황별로 결과가 달라지지 않게 해주세요. 다시 말해 **언제나 동일한 결과**가 오게 해주세요.~~
 
@@ -106,14 +110,18 @@ password가 조건에 맞지 않는 경우.
 모든 request마다 test를 충분히 작성해주세요(상태 코드 검사, body 검사 등). PR이 merge될 때마다 자동으로 E2E 검사가 이뤄집니다.
 
 다음 항목을 포함해야 합니다.
+
 #### REST API
+
 - 성공하는 경우
   - res.status
   - res.body의 모든 property
 - 실패하는 경우
   - res.status
   - res.message
+
 #### GraphQL
+
 - 성공하는 경우
   - res.body.data[0] 존재 유무
 - 실패하는 경우
@@ -122,7 +130,7 @@ password가 조건에 맞지 않는 경우.
 
 ### GraphQL
 
-![GraphQL Docs](graphql-docs.png)
+![GraphQL Docs](assets/graphql-docs.png)
 GraphQL 서버 개발 시, field 타입을 정확하게 지정하여 Docs panel만으로 필드 및 반환 객체의 이름과 타입 정보를 알 수 있게 해 주세요.
 
 Query나 Mutation에 인자가 들어가는 경우, `Variables` 항목에 분리하여 작성해주세요.
