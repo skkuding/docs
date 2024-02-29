@@ -54,7 +54,7 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           {
-            text: 'What is Coding Platform?',
+            text: 'What is Codedang?',
             link: '/intro/'
           },
           {
