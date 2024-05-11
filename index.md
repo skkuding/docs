@@ -10,11 +10,11 @@ hero:
     alt: Codedang Logo
   actions:
     - theme: brand
-      text: Get Started
-      link: /intro/
+      text: For Developers
+      link: /dev/intro/
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/skkuding/next
+      text: For Users
+      link: /user/login
 
 features:
   - title: 👍 Easy to use
