@@ -90,7 +90,7 @@ export default defineConfig({
             },
             {
               text: '프로젝트 구조',
-              link: '/dev/project/hierarchy'
+              link: '/dev/project/architecture'
             },
             {
               text: 'Staging vs Production',
