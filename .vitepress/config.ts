@@ -70,7 +70,7 @@ export default defineConfig({
               link: 'https://github.com/skkuding/next/blob/main/CONTRIBUTING.md'
             },
             {
-              text: 'API 문서',
+              text: 'API 문서 (Bruno)',
               link: '/dev/intro/bruno'
             }
           ]
