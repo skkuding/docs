@@ -70,8 +70,8 @@ export default defineConfig({
               link: '/dev/intro/getting-started'
             },
             {
-              text: 'Contributing Guide',
-              link: 'https://github.com/skkuding/next/blob/main/CONTRIBUTING.md'
+              text: '개발 프로세스',
+              link: '/dev/intro/process'
             },
             {
               text: 'API 문서 (Bruno)',
