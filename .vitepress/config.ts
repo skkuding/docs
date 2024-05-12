@@ -44,11 +44,13 @@ export default defineConfig({
     nav: [
       {
         text: 'For Developers',
-        link: '/dev/intro/'
+        link: '/dev/intro/',
+        activeMatch: '/dev/'
       },
       {
         text: 'For Users',
-        link: '/user/login'
+        link: '/user/login',
+        activeMatch: '/user/'
       },
       {
         text: 'Codedang',
