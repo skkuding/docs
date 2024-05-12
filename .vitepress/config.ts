@@ -99,10 +99,6 @@ export default defineConfig({
             {
               text: 'Staging vs Production',
               link: '/dev/project/stage-server'
-            },
-            {
-              text: 'Project Roadmap',
-              link: '/dev/project/roadmap'
             }
           ]
         }
