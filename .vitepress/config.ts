@@ -93,10 +93,6 @@ export default defineConfig({
               link: '/dev/project/hierarchy'
             },
             {
-              text: '배포 과정',
-              link: '/dev/project/deploy'
-            },
-            {
               text: 'Staging vs Production',
               link: '/dev/project/stage-server'
             }
