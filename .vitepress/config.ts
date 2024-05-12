@@ -31,6 +31,9 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
+    editLink: {
+      pattern: 'https://github.com/skkuding/docs/edit/main/:path'
+    },
     search: {
       provider: 'local',
       options: {
