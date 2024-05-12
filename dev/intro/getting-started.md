@@ -48,7 +48,7 @@
 
 [Visual Studio Code 홈페이지](https://code.visualstudio.com/)에서 VSCode 설치 파일을 다운로드 받고, 파일을 실행하여 설치합니다.
 
-### 3. WSL 환경 열기 (Windows만)
+### 3. WSL 환경 열기 <Badge type="info" text="Windows Only" />
 
 > Windows 환경이 아니라면 이 단계를 건너뛰세요 :fast_forward:
 
