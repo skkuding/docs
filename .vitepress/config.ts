@@ -5,6 +5,7 @@ export default defineConfig({
   description: '코드당 프로젝트의 거의 모든 것을 담은 문서',
   titleTemplate: false,
   lastUpdated: true,
+  ignoreDeadLinks: 'localhostLinks',
 
   sitemap: {
     hostname: 'https://docs.codedang.com'
