@@ -76,6 +76,10 @@ export default defineConfig({
               link: '/dev/intro/process'
             },
             {
+              text: '코드 스타일 가이드',
+              link: '/dev/intro/style-guide'
+            },
+            {
               text: 'API 문서 (Bruno)',
               link: '/dev/intro/bruno'
             }
