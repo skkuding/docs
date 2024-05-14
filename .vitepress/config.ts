@@ -78,13 +78,10 @@ export default defineConfig({
             {
               text: '코드 스타일 가이드',
               link: '/dev/intro/style-guide'
-            },
-            {
-              text: 'API 문서 (Bruno)',
-              link: '/dev/intro/bruno'
             }
           ]
         },
+
         {
           text: 'Project',
           items: [
@@ -101,8 +98,29 @@ export default defineConfig({
               link: '/dev/project/stage-server'
             }
           ]
+        },
+
+        {
+          text: 'Backend',
+          items: [
+            {
+              text: '개발 가이드',
+              link: '/dev/backend/'
+            }
+          ]
+        },
+
+        {
+          text: 'Tools',
+          items: [
+            {
+              text: 'API 문서 (Bruno)',
+              link: '/dev/tools/bruno'
+            }
+          ]
         }
       ],
+
       '/user/': [
         {
           text: '관리자',

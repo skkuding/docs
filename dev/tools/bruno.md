@@ -130,7 +130,7 @@ password가 조건에 맞지 않는 경우.
 
 ### GraphQL
 
-![GraphQL Docs](assets/graphql-docs.png)
+![GraphQL Docs](assets/bruno-graphql-docs.png)
 GraphQL 서버 개발 시, field 타입을 정확하게 지정하여 Docs panel만으로 필드 및 반환 객체의 이름과 타입 정보를 알 수 있게 해 주세요.
 
 Query나 Mutation에 인자가 들어가는 경우, `Variables` 항목에 분리하여 작성해주세요.
