@@ -5,9 +5,11 @@
 
 ## 실행 방법
 
-1. pnpm을 설치해주세요 (https://pnpm.io/installation)
-2. `pnpm install`을 실행해주세요
-3. `pnpm dev`를 실행해주세요
+1. pnpm을 설치해주세요. (https://pnpm.io/installation)
+2. `pnpm install`을 실행해주세요.
+3. `pnpm dev`를 실행해주세요.
+
+이 문서는 Vitepress로 만들어졌어요. 더 알아보고 싶다면 [공식 문서](https://vitepress.dev/)를 참고해주세요!
 
 ## 작성 규칙
 
