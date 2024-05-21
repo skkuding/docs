@@ -20,5 +20,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: skkuding/codedang/.github/actions/setup-pnpm@main
 
+      - name: Build documentation
+        run: pnpm build
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
