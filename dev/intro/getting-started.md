@@ -186,6 +186,12 @@ Dev Containers 확장을 선택하고 'Install' 버튼을 눌러 설치합니다
 cd apps/backend
 pnpm start:dev
 ```
+Judge Server인 iris 실행을 위해서는 터미널을 열어 다음 명령어를 입력해주세요.
+
+```sh
+cd apps/infra
+sudo -E go run .
+```
 
 ## Remote Development
 
