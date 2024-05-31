@@ -55,7 +55,9 @@ Frontend는 Vue 3에서 Typescript를 적극적으로 지원하며, backend는 N
 보통 Git hook 관리 도구로 Husky를 많이 사용하지만, Lefthook이 훨씬 속도가 빠르고 여러 기능들을 제공합니다.
 
 ## Frontend
-
+::: warning Work in Progress 🚧
+현재 Frontend는 Vue3가 아닌, NextJS로 migrate 완료한 상태입니다. Frontend의 아래 내용은 최신 내용과 맞지 않으니 참고해주세요.
+:::
 ### Vue 3
 
 Frontend framework로 [Vue 3](https://vuejs.org/)을 사용합니다.
