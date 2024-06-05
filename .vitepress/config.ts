@@ -107,6 +107,16 @@ export default defineConfig({
         },
 
         {
+          text: 'Frontend',
+          items: [
+            {
+              text: '개발 가이드',
+              link: '/dev/frontend/'
+            }
+          ]
+        },
+
+        {
           text: 'Tools',
           items: [
             {
