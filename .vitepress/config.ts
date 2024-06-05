@@ -86,10 +86,6 @@ export default defineConfig({
           text: 'Project',
           items: [
             {
-              text: '기술 스택',
-              link: '/dev/project/tech-stack'
-            },
-            {
               text: '프로젝트 구조',
               link: '/dev/project/architecture'
             },
