@@ -112,6 +112,10 @@ export default defineConfig({
             {
               text: '개발 가이드',
               link: '/dev/frontend/'
+            },
+            {
+              text: '폴더 구조',
+              link: '/dev/frontend/folders'
             }
           ]
         },
