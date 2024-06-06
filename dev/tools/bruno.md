@@ -21,6 +21,10 @@ https://www.usebruno.com/downloads
 Bruno를 실행하고 'Open Collection'을 클릭합니다.
 Codedang 폴더에서 collection 폴더의 client 또는 admin을 선택합니다.
 
+> [!WARNING]
+> 로컬에 코드당을 git clone 해두지 않았다면 Bruno를 사용할 수 없어요.
+> Gitpod이나 Codespace를 사용 중인 분들은 따로 git clone 후 진행해주세요!
+
 ![Open Collection](assets/bruno-start.png)
 
 ### 3. 환경 변수 설정
