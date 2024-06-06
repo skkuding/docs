@@ -121,6 +121,16 @@ export default defineConfig({
         },
 
         {
+          text: 'Infra',
+          items: [
+            {
+              text: 'CI/CD (GitHub Actions)',
+              link: '/dev/infra/ci-cd'
+            }
+          ]
+        },
+
+        {
           text: 'Tools',
           items: [
             {
