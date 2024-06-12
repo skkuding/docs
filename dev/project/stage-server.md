@@ -1,6 +1,6 @@
 # Stage Server
 
-스테이지 서버는 배포 전 테스트를 위한 서버로, [dev.codedang.com](https://dev.codedang.com/)에서 확인할 수 있습니다.
+스테이지 서버는 배포 전 테스트를 위한 서버로, [stage.codedang.com](https://stage.codedang.com/)에서 확인할 수 있습니다.
 
 ![배포 과정](assets/deploy-pipeline.png)
 
