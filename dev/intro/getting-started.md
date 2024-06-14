@@ -193,6 +193,18 @@ Dev Containers 확장을 선택하고 'Install' 버튼을 눌러 설치합니다
 
 ### 4. 서버 실행
 
+백엔드 서버를 실행하기 전에 환경변수를 설정해주세요.
+`apps/backend` 디렉토리에 `.env`파일을 생성하고 아래 환경변수를 추가해주세요.
+- `JWT_SECRET`
+- `NODEMAILER_HOST`
+- `NODEMAILER_USER`
+- `NODEMAILER_PASS`
+- `NODEMAILER_FROM`
+- `GITHUB_CLIENT_ID`
+- `GITHUB_CLIENT_SECRET`
+- `KAKAO_CLIENT_ID`
+- `KAKAO_CLIENT_SECRET`
+
 백엔드 서버 실행을 위해서는 터미널을 열어(단축키 <kbd>Ctrl</kbd> + <kbd>\`</kbd> 또는 <kbd>⌃</kbd> + <kbd>\`</kbd>) 다음 명령어를 입력해주세요.
 
 ```sh
