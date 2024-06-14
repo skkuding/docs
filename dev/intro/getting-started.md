@@ -120,6 +120,19 @@ Dev Container를 사용하지 않는다면 직접 확장 기능을 설치해야 
 
 :::
 
+
+다음으로 프론트엔드 서버 설정에 필요한 환경변수 파일을 설정해주세요.
+`apps/frontend`디렉토리에 `.env` 파일을 생성하고, 아래 환경변수를 추가해주세요.
+- `NEXT_PUBLIC_BASEURL`
+    - API 서버 Endpoint
+- `NEXT_PUBLIC_GQL_BASEURL`
+    - GraphQL 서버 Endpoint
+- `NEXTAUTH_URL`
+    - Nextauth API Endpoint
+- `NEXTAUTH_SECRET`
+- `NEXT_URL`
+    - Next.js 서버 주소
+
 ### 6. 서버 실행
 
 프론트엔드 서버를 실행하려면 터미널을 열어(단축키 <kbd>Ctrl</kbd> + <kbd>\`</kbd> 또는 <kbd>⌃</kbd> + <kbd>\`</kbd>) 다음 명령어를 입력해주세요.
