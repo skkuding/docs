@@ -37,21 +37,23 @@ Epic과 task 목록은 Notion에서 확인할 수 있어요. ([Epic 목록](http
 
 ### Epic 및 Task 생성 규칙 {#task-rule}
 
-- Epic과 task 생성 시 마감일과 우선순위는 기획 팀과 개발 팀이 함께 논의해야 해요.
+- Epic과 큰 task 생성 시 마감일과 우선순위는 기획 팀과 개발 팀이 함께 논의해야 해요.
 - Task 생성 시 담당 팀과 태그를 반드시 설정해주세요. 담당자가 정해졌다면 담당자도 설정해주세요.
 - Hotfix(급한 수정)이 아니라면, task는 모두 epic에 속해야 해요.
 - 일반적으로 우선 순위는 [중요한 버그 > 외부 요청(교수님 등) > 사소한 버그 > 기능 개발] 순으로 설정해요.
 - Epic과 task에 대한 논의는 Notion 내 댓글로 이뤄져야 해요. 논의와 task 내용을 한 곳에 모으기 위해 Teams 사용은 자제해주세요.
 - 논의 중 다른 epic이나 task 참조가 필요한 경우 `@`으로 멘션해주세요.
 
-### GitHub Issue 생성
+> ### GitHub Issue 생성
+> 24.08.07. 수정: 더 이상 Github Issue를 사용하지 않습니다. 자세한 배경은 [팀즈 공지](https://teams.microsoft.com/l/message/19:a3f962f90fa246798e0299952fcff693@thread.tacv2/1723006542712?tenantId=88d445e5-e9b0-4cd3-815f-40f8a3009b42&groupId=ae346662-b2db-49e7-815e-6532a72ef07d&parentMessageId=1723006542712&teamName=SKKUDING%20%EC%8A%A4%EA%BE%B8%EB%94%A9&channelName=all-%EA%B3%B5%EC%A7%80&createdTime=1723006542712)를 확인해주세요.
+> 
+> 개발을 시작하기 전 task를 GitHub Issue로 생성해야 해요.
+> Task와 GitHub issue, 그리고 pull request는 가급적 1:1:1로 대응해야 해요.
+> 이를 고려해서 GitHub issue를 생성해주세요.
 
-개발을 시작하기 전 task를 GitHub Issue로 생성해야 해요.
-Task와 GitHub issue, 그리고 pull request는 가급적 1:1:1로 대응해야 해요.
-이를 고려해서 GitHub issue를 생성해주세요.
+> Issue 생성 시 템플릿에 따라 내용은 간단하게 적고 구현 동기와 이유, 간단한 설계(예: 어떤 함수/라이브러리를 변경/사용할지) 등을 적어주세요.
+> 실제 구현 과정에서 원래 생각했던 내용과 다른 게 있을 수 있으니, 구현 방식과 코드에 대한 상세한 내용은 pull request에서 작성해주세요.
 
-Issue 생성 시 템플릿에 따라 내용은 간단하게 적고 구현 동기와 이유, 간단한 설계(예: 어떤 함수/라이브러리를 변경/사용할지) 등을 적어주세요.
-실제 구현 과정에서 원래 생각했던 내용과 다른 게 있을 수 있으니, 구현 방식과 코드에 대한 상세한 내용은 pull request에서 작성해주세요.
 
 ## 2. 코드 작성 및 Commit
 
@@ -61,7 +63,7 @@ Task를 생성하고 GitHub Issue를 생성했다면, 개발을 위한 git branc
 코드당 프로젝트에서는 GitHub Flow와 유사한 branch 전략을 사용해요. (참고: [Git Flow vs GitHub Flow](https://www.alexhyett.com/git-flow-github-flow/))
 
 - `main` branch는 배포 가능한 상태를 유지해야 하며, 개발은 `main` branch에서 새로운 branch를 생성하여 진행해야 해요.
-- Branch 이름은 `{issue-number}-{description}` 형식으로 생성해주세요. (예: 로그인 페이지를 만드는 123번 issue를 위한 branch는 `123-login-page`)
+- Branch 이름은 `t{notion-task-ID-without-prefix}-{description}` 형식으로 생성해주세요. (예: 로그인 페이지를 만드는 123번 task를 위한 branch는 `t123-login-page`)
 - Branch 이름의 모든 글자는 숫자, 영문 소문자, 그리고 `-`만 사용할 수 있어요.
 
 ### Commit Convention
@@ -135,7 +137,7 @@ Visual Studio Code와 GitPod에서 개발 환경을 세팅하는 방법을 문�
 
 ## 3. Pull Request 생성 및 리뷰
 
-각 pull request는 가능한 작은 단위로 작성해야 해요. 이말인 즉슨, pull request는 하나의 issue에 대응하고 곧 하나의 task에 대응하기 때문에 **task와 issue 생성부터 가급적 작은 단위로 이뤄져야 해요.**
+각 pull request는 가능한 작은 단위로 작성해야 해요. 이말인 즉슨, pull request는 하나의 task에 대응하기 때문에 **issue와 연결될 task 생성은 작은 단위로 이뤄져야 해요.**
 
 또한 하나의 pull request는 완전해야 해요.
 즉, 테스트 코드를 포함해야 하고 완전하게 동작하며 CI를 통과해야 해요.
@@ -149,6 +151,9 @@ Pull Request를 생성할 때는 다음 사항을 고려해주세요.
 - Reviewers로 팀장뿐만 아니라 팀원들도 설정해주세요. 팀장이 모든 코드를 리뷰하기에는 시간이 부족하기 때문에 팀원들이 서로 코드 리뷰를 하도록 유도해요.
 - 정말 급한 상황이 아니라면 review를 부추기지 않도록 해요. Review를 부추긴다면 제대로 된 확인 없이 approve 되고, 원래 review의 의미가 퇴색될 수 있어요.
 - Reviewer는 코드 리뷰를 완료하고 approve를 누르면, PR 작성자가 squash merge하도록 해요. 이때 merge 전에는 다시 한 번 코드를 확인해주세요.
+- Close할 Notion task를 언급합니다. 이때, 형식은 `{Magic-word} TAS-{task ID}` 예: `closes TAS-517` 처럼 작성하여 Notion task와 Pull Request을 연결합니다. (`closes`가 아니더라도, 지원하는 Magic-word를 사용하면 됩니다. [노션 링크 참고](https://www.notion.so/ko-kr/help/github)). 
+예를 들어, https://github.com/skkuding/codedang/pull/1929 을 확인하시면, PR 설명에 `closes TAS-517` 을 언급하였고, PR과 Notion task 간에 양방향 연결됩니다. PR이 닫히면 연결된 Notion task가 같이 닫히게 됩니다. 
+
 
 ::: tip Merge vs Rebase
 
