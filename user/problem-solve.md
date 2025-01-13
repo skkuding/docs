@@ -38,9 +38,11 @@
   이 패널에서는 사용자들이 제출한 코드에 관한 세부적인 정보들을 알 수 있어요. 
    - **`#`** * : 제출한 코드의 제출 번호가 나타나요.
    - **`User ID`** * : 해당 코드를 제출한 사용자의 ID가 나타나요. 
-   - **`Result`** * : 제출한 코드에 대한 결과값이 나타나요. 종류에는 **`Accepted`**, **`Compile Error`**, **`Runtime Error`**, **`Time Limit Exceeded`**, **`Memory Limit Exceeded`**, **`Output Limit Exceeded`**, **`Wrong Answer`**가 있어요.
+   - **`Result`** * : 제출한 코드에 대한 결과값이 나타나요. 종류에는 `Accepted`, `Compile Error`, `Runtime Error`, `Time Limit Exceeded`, `Memory Limit Exceeded`, `Output Limit Exceeded`, `Wrong Answer`가 있어요.
    - **`Language`** * : 해당 코드를 작성한 언어가 나타나요.
    - **`Submission Time`** * : 해당 코드를 작성한 시간이 `YYYY-MM-DD HH:MM:SS` 형식으로 나타나요.
    - **`Code Size`** * : 제출한 코드의 메모리 용량이 `B` 형식으로 나타나요.
 
-**`Submission`**을 누르면 
+  **`Submission`** 중 하나를 클릭하게 되면, **해당 사용자가 제출한 코드와 테스트 케이스 채점 결과**를 볼 수 있어요.
+
+3. **코드 입력 영역**(**`Code Editor`**)
