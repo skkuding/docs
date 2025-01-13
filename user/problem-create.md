@@ -20,7 +20,7 @@ Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제
 ![image](https://github.com/user-attachments/assets/09380b6d-00df-4de5-9b1f-14943c227ae3)
 
 1. **`Title`** * : 문제의 이름을 입력해주세요. 최대 200자까지 입력할 수 있어요.
-2. **`Visible`** * : 코드당의 Problem 탭에 문제를 노출할지 말지 결정해요. Visible이 True이면 문제가 모두에게 공개되어요.
+2. **`Visible`** * : 코드당의 Problem 탭에 문제를 노출할지 말지 결정해요. Visible이 활성화되면 문제가 모두에게 공개되어요.
 3. **`Info`** : Language와 Level로 이루어져 있어요.
    - `Language` * : 사용자가 풀 수 있는 언어를 선택해요. 현재 C, C++, Python3, Java를 지원하고, 다중 선택이 가능해요.
    - `Level` * : 문제의 난이도를 설정해요. Level 1~5 중에 선택해주세요.
