@@ -2,7 +2,7 @@
 
 대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요. 
 
-![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f) 
+![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f)   
 
 ## 대회 직접 만들기 ##   
 우측 상단의 **Create** 버튼을 누르면 **Create Contest** 페이지에서 새로운 대회를 생성할 수 있어요.   
@@ -34,9 +34,7 @@
     - 다른 대회에 포함된 문제도 불러올 수 있어요. 불러온 문제가 어떤 문제에 포함되었는지 알고 싶다면 파일 아이콘을 클릭해 보세요.
    ![Contest Problem List](https://github.com/user-attachments/assets/c6e5093d-c7e8-463b-a8f1-1716129b6527)
     - **Score**는 문제 별 점수를 설정할 수 있는 란이에요. 점수 설정에 대한 별도의 제한은 없어요.
-    - **Order**는 문제의 번호를 지정할 수 있는 란이에요.
-
----   
+    - **Order**는 문제의 번호를 지정할 수 있는 란이에요.   
 
 ## 대회 복제하기 ##   
 
