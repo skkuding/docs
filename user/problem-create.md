@@ -42,7 +42,7 @@ Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제
 Sample Testcase의 **Input/Output은 사용자에게 공개**되고, Hidden Testcase는 공개되지 않아요.
 (대회에 속한 문제의 경우 **채점 결과를 비공개**할 수 있어요. 자세한 것은 대회 생성하기 섹션을 참고해주세요.)
 
-모든 Testcase의 **배점 합계는 100%**가 되어야 해요. 각 배점을 직접 설정하거나 `Equal Distribution` 버튼을 통해 일괄적으로 배점을 설정할 수 있어요.
+모든 Testcase의 <strong>배점 합계는 100%</strong>가 되어야 해요. 각 배점을 직접 설정하거나 `Equal Distribution` 버튼을 통해 일괄적으로 배점을 설정할 수 있어요.
 
 Testcase 정책을 정리하면 다음과 같아요. (User Testcase는 사용자가 코드를 실행할 때 일시적으로 추가하는 테스트케이스로, 관리자가 설정하지 않아요.)
 | | Input/Output 노출 여부	| Test 버튼 클릭 시	| Submit 버튼 클릭 시 |
