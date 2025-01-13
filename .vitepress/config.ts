@@ -146,16 +146,33 @@ export default defineConfig({
           text: '관리자',
           items: [
             {
-              text: '가입 및 로그인',
-              link: '/user/login'
+              text: '문제 생성하기',
+              link: '/user/problem-create'
             },
             {
-              text: '그룹 및 멤버 관리',
-              link: '/user/group'
+              text: '문제 관리하기',
+              link: '/user/problem-manage'
             },
             {
-              text: '문제 생성 및 관리',
-              link: '/user/problem'
+              text: '대회 생성하기',
+              link: '/user/contest-create'
+            },
+            {
+              text: '대회 관리하기',
+              link: '/user/contest-manage'
+            }
+          ]
+        },
+        {
+          text: '사용자',
+          items: [
+            {
+              text: '문제 풀기',
+              link: '/user/problem-solve'
+            },
+            {
+              text: '대회 참여하기',
+              link: '/user/contest-participate'
             }
           ]
         }
