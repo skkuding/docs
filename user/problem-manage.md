@@ -2,7 +2,7 @@
 
 본 Section에서는 문제 관리 기능에 대해서 소개합니다.
 
-Management 페이지에서 좌측 Problem 버튼을 클릭하면 Management Problem List 페이지에 접속할 수 있어요.
+Management 페이지에서 좌측 Problem 버튼을 클릭하면 문제 관리 페이지에 접속할 수 있습니다.
 
 ![image](https://github.com/user-attachments/assets/7fbc1b24-5804-4e24-a200-cb080312815f)
 
