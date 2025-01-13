@@ -5,7 +5,7 @@
 ![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f)   
 
 ## 대회 직접 만들기 ##   
-우측 상단의 **Create** 버튼을 누르면 **Create Contest** 페이지에서 새로운 대회를 생성할 수 있어요.   
+우측 상단의 **`+ Create`** 버튼을 누르면 **Create Contest** 페이지에서 새로운 대회를 생성할 수 있어요.   
 지금부터 각 섹션의 역할을 하나씩 알아볼게요.   
 
 ![Create Contest](https://github.com/user-attachments/assets/568c8ea4-42d6-4ff6-ba45-76a91a276a8f)
@@ -36,22 +36,23 @@
     - **Score**는 문제 별 점수를 설정할 수 있는 란이에요. 점수 설정에 대한 별도의 제한은 없어요.
     - **Order**는 문제의 번호를 지정할 수 있는 란이에요.   
 
+
 ## 대회 복제하기 ##   
 
-1개의 대회를 선택하고 우측 상단의 **Duplicate** 버튼을 누르면 이미 만들어진 대회를 복제할 수 있어요.   
+1개의 대회를 선택하고 우측 상단의 **`Duplicate`** 버튼을 누르면 **이미 만들어진 대회를 복제**할 수 있어요.   
 ![Contest List Duplicate](https://github.com/user-attachments/assets/8f31ae61-6f94-43b3-9cf4-1749559fadff)
 
 1. 대회를 아무 것도 선택하지 않거나 2개 이상의 대회를 선택하면 버튼이 비활성화돼요.
   
 2. 대회가 복제되면, 아래와 같은 정보들이 함께 복사돼요.
-  - Title
-  - Start Time
-  - End Time
-  - Description
-  - Enable participants Copy/Pasting (토글 ON/OFF 상태)
-  - Reveal scores to participants (토글 ON/OFF 상태)
-  - Invitation Code
-  - Contest Problem List
+   - Title
+   - Start Time
+   - End Time
+   - Description
+   - Enable participants Copy/Pasting (토글 ON/OFF 상태)
+   - Reveal scores to participants (토글 ON/OFF 상태)
+   - Invitation Code
+   - Contest Problem List
 
 3. 단, 대회가 복제되면 아래와 같은 정보는 **복사되지 않으니** 주의해 주세요.
     - 대회 참여자의 **제출 정보**
