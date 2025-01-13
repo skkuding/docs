@@ -25,8 +25,7 @@
 1.  **문제 정보 패널**(**`Description`**)
    
    말 그대로 문제의 정보에 관한 내용들을 알 수 있는 패널이에요. 
-   ![image](https://github.com/user-attachments/assets/27cd1178-adde-4f69-8d10-42b4ded2bd79)
-   ![image](https://github.com/user-attachments/assets/1e3f8379-5365-49c5-b416-4afcb7d4efd4)
+   ![image](https://github.com/user-attachments/assets/27cd1178-adde-4f69-8d10-42b4ded2bd79) ![image](https://github.com/user-attachments/assets/1e3f8379-5365-49c5-b416-4afcb7d4efd4)
 
    - **`Title`** * :문제의 **제목**이 나타나요.
    - **`Problem Description`** * : 문제에 대한 자세한 설명이 나타나요. 사용자는 이 설명을 보고 코딩 문제에 대한 구체적인 정보들을 얻을 수 있어요.
