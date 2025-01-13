@@ -7,7 +7,7 @@
 
 ## 문제 직접 생성
 
-Management 페이지의 왼쪽에 있는 'Problem' 버튼을 클릭하면 문제 관리 페이지에 접속할 수 있어요.
+Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제 관리 페이지에 접속할 수 있어요.
 ![image](https://github.com/user-attachments/assets/56c49c76-cbbf-4916-8acb-0172242d4637)
 
 오른쪽 상단의 `+ Create` 버튼을 클릭하면 문제 생성 페이지로 이동할 수 있어요.
