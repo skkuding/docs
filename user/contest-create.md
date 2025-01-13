@@ -2,9 +2,7 @@
 
 대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요. 
 
-![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f)
-
----   
+![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f) 
 
 ## 대회 직접 만들기 ##   
 우측 상단의 **Create** 버튼을 누르면 **Create Contest** 페이지에서 새로운 대회를 생성할 수 있어요.   
