@@ -25,6 +25,9 @@
 1.  **문제 정보 패널**(**`Description`**)
    
    말 그대로 문제의 정보에 관한 내용들을 알 수 있는 패널이에요. 
+   ![image](https://github.com/user-attachments/assets/27cd1178-adde-4f69-8d10-42b4ded2bd79)
+   ![image](https://github.com/user-attachments/assets/1e3f8379-5365-49c5-b416-4afcb7d4efd4)
+
    - **`Title`** * :문제의 **제목**이 나타나요.
    - **`Problem Description`** * : 문제에 대한 자세한 설명이 나타나요. 사용자는 이 설명을 보고 코딩 문제에 대한 구체적인 정보들을 얻을 수 있어요.
    - **`Input Description`** * : 해당 문제의 **입력값**에 대한 설명이 나타나요. 
@@ -40,6 +43,8 @@
 2. **문제 제출 패널**(**`Submission`**)
 
   이 패널에서는 사용자들이 제출한 코드에 관한 세부적인 정보들을 알 수 있어요. 
+  ![image](https://github.com/user-attachments/assets/bc61acae-831f-4ca1-830c-8a05dc2ff4c4)
+
    - **`#`** * : 제출한 코드의 제출 번호가 나타나요.
    - **`User ID`** * : 해당 코드를 제출한 사용자의 ID가 나타나요. 
    - **`Result`** * : 제출한 코드에 대한 결과값이 나타나요.
@@ -54,7 +59,9 @@
 
 3. **코드 입력 영역**(**`Code Editor`**)
 
-   이 패널에서는 코드 작성을 도와주는 여러 도구들을 제공해요.
+   이 패널에서는 코드 작성을 도와주는 여러 도구들을 제공해요
+   ![image](https://github.com/user-attachments/assets/d279b0e5-f9a1-4ce6-b348-85647f1514e0)
+
     - **`Reset`** * : 사용자가 작성한 코드를 모두 지우는 버튼이에요. 처음부터 다시 코드를 짜고 싶을 경우 유용한 버튼이에요.
     - **`Save`** * : 사용자가 작성한 코드를 저장하는 버튼이에요. 코드를 저장하면 해당 페이지를 나가도 작성했던 코드들이 남아있어요.
     - **`Test`** * : 사용자가 작성한 코드에 대해 `sample testcase`와 곧 설명할 `user testcase`를 실행할 수 있는 버튼이에요.
