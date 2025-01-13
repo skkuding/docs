@@ -1,7 +1,7 @@
 ### 대회 생성하기 ###
 
 대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요.   
-
+![Contest List](user/assets/Contest List.png)
 ---
 
 우측 상단의 **Create** 버튼을 누르면 **Create Contest** 페이지에서 새로운 대회를 생성할 수 있어요.   
