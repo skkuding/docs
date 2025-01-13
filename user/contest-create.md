@@ -2,7 +2,7 @@
 
 대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요. 
 
-![Contest List](user/assets/Contest List.png)
+![Contest List](https://github.com/user-attachments/assets/c1119f89-b2a4-473d-9fa2-70018422ea90)
 
 ---
 
