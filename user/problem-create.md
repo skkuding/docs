@@ -15,7 +15,7 @@ Management 페이지에서 좌측 Problem 버튼을 클릭하면 Problem 페이�
 
 ![image](https://github.com/user-attachments/assets/09380b6d-00df-4de5-9b1f-14943c227ae3)
 
-**문제 기본 정보 작성**
+### 문제 기본 정보 작성
 
 먼저, 문제에 대한 기본 정보를 작성해주세요. ( * : 필수 필드)
 1. **`Title`** * : 문제의 이름을 입력해요. 최대 200자까지 입력할 수 있어요.
@@ -31,7 +31,7 @@ Management 페이지에서 좌측 Problem 버튼을 클릭하면 Problem 페이�
 
 ![image](https://github.com/user-attachments/assets/cfc6a9ff-c9c6-4514-a1e6-7745e8c312d8)
 
-**문제 Testcase 정보 작성 ***
+### 문제 Testcase 정보 작성 *
 
 다음으로 채점에 사용될 Testcase를 설정해주세요.
 
@@ -52,7 +52,7 @@ Testcase 정책을 정리하면 다음과 같아요.
 | User Testcase  	| 사용자가 추가	| 채점됨 + 채점 결과 노출	| 채점되지 않음
 
 
-**문제 기타 정보 작성**
+### 문제 기타 정보 작성
 
 사용자가 처음 문제를 풀러 들어가면 보여지는 기본 `Template`을 설정할 수 있어요. 언어별로 다르게 설정할 수 있어요.
 
