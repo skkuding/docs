@@ -1,6 +1,8 @@
 # 대회 생성하기 #
 
-대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요. 
+본 Section에서는 대회 생성 기능에 대해서 소개합니다.   
+
+기본적으로 대회는 Management 페이지의 **Contest** 메뉴에서 관리할 수 있어요. 
 
 ![Contest List](https://github.com/user-attachments/assets/02f3fff2-e969-4d42-91ab-92675343457f)   
 
