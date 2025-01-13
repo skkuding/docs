@@ -10,7 +10,7 @@
 Management 페이지의 왼쪽에 있는 'Problem' 버튼을 클릭하면 문제 관리 페이지에 접속할 수 있어요.
 ![image](https://github.com/user-attachments/assets/56c49c76-cbbf-4916-8acb-0172242d4637)
 
-오른쪽 상단의 + Create 버튼을 클릭하면 문제 생성 페이지로 이동할 수 있어요.
+오른쪽 상단의 `+ Create` 버튼을 클릭하면 문제 생성 페이지로 이동할 수 있어요.
 
 
 ### 문제 기본 정보 작성
@@ -24,11 +24,9 @@ Management 페이지의 왼쪽에 있는 'Problem' 버튼을 클릭하면 문제
 3. **`Info`** : Language와 Level로 이루어져 있어요.
    - `Language` * : 사용자가 풀 수 있는 언어를 선택해요. 현재 C, C++, Python3, Java를 지원하고, 다중 선택이 가능해요.
    - `Level` * : 문제의 난이도를 설정해요. Level 1~5 중에 선택해주세요.
-4. **`Description` * : 문제에 대한 정보를 작성해주세요. 수식, 사진 첨부를 지원해요. 
-5. **`Input Description` * : Testcase Input에 대한 설명을 입력해 주세요. 예를 들어, `첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)`와 같이 작성할 수 있습니다.
-6. **`Output Description` * : Testcase Output에 대한 설명을 입력해 주세요. 예를 들어, `첫째 줄에 A+B를 출력한다.`와 같이 작성할 수 있습니다.
-
-
+4. **`Description`** * : 문제에 대한 정보를 작성해주세요. 수식, 사진 첨부를 지원해요. 
+5. **`Input Description`** * : Testcase Input에 대한 설명을 입력해 주세요. 예를 들어, `첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)`와 같이 작성할 수 있습니다.
+6. **`Output Description`** * : Testcase Output에 대한 설명을 입력해 주세요. 예를 들어, `첫째 줄에 A+B를 출력한다.`와 같이 작성할 수 있습니다.
 
 
 
@@ -42,12 +40,11 @@ Management 페이지의 왼쪽에 있는 'Problem' 버튼을 클릭하면 문제
 
 모든 Testcase는 채점에 사용되고 **채점 결과가 공개**되지만, 
 Sample Testcase의 Input/Output은 사용자에게 공개되고, Hidden Testcase는 공개되지 않아요.
-
 (대회에 속한 문제의 경우 채점 결과를 비공개할 수 있어요. 자세한 것은 대회 생성하기 섹션을 참고해주세요.)
 
 모든 Testcase의 배점 합계는 100%가 되어야 해요. 각 배점을 직접 설정하거나 `Equal Distribution` 버튼을 통해 일괄적으로 배점을 설정할 수 있어요.
 
-Testcase 정책을 정리하면 다음과 같아요.
+Testcase 정책을 정리하면 다음과 같아요. (User Testcase는 관리자가 설정하는 것이 아닌, 사용자가 코드를 실행해볼 때 잠깐 추가할 수 있는 테스트케이스에요.)
 | | Input/Output 노출 여부	| Test 버튼 클릭 시	| Submit 버튼 클릭 시 |
 | --| -- | -- | -- |
 | Sample Testcase |	노출됨	| 채점됨 + 채점 결과 노출	| 채점됨 + 대회 생성 시 채점 결과 노출 여부 결정
