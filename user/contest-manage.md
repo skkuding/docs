@@ -70,6 +70,8 @@
 
 각 제출 내역을 클릭하면, 해당 제출 내역의 **테스트케이스 별 제출 결과**와 **소스 코드**를 볼 수 있어요.
 
+![All Submissions Page](https://github.com/user-attachments/assets/7ed178e7-1efa-4e8e-bbc3-a86be4004752)   
+
 ## 제출 내역 내보내기 ##   
 
 대회 상세 정보 페이지에서 **`Export`** 버튼을 클릭하면 참여자들의 제출 내역을 **`CSV`** 파일로 내보낼 수 있어요.
