@@ -15,7 +15,7 @@ Problem List에서는 코드당 내의 모든 문제를 확인할 수 있습니�
 삭제하려는 문제를 체크박스를 통해 선택하고, 오른쪽 위의 🗑(휴지통) 버튼을 클릭해주세요.
 ![image](https://github.com/user-attachments/assets/e1111ad8-c2cf-454a-93c2-bc7315fe611b)
 
-삭제를 재확인 대화 상자가 나타나면, `Delete` 버튼을 클릭하여 문제를 삭제할 수 있어요.
+삭제 재확인 대화 상자가 나타나면, `Delete` 버튼을 클릭하여 문제를 삭제할 수 있어요.
 ![image](https://github.com/user-attachments/assets/16990ebb-1aef-4c74-aa08-8e459a8f147d)
 
 
