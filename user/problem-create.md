@@ -70,11 +70,11 @@ Testcase 정책을 정리하면 다음과 같아요. (User Testcase는 사용자
 
 여러 개의 문제를 한번에 올리는 경우에는 문제 정보를 파일로 업로드해서 문제를 생성할 수 있어요.
 
-![image](https://github.com/user-attachments/assets/933e17e4-be42-4c17-9bba-387d207c2faf)
-
-Problem 페이지에서 여기서 `Upload` 버튼을 클릭하면 문제 업로드 모달이 나오게 되어요.
+Problem 페이지에서 `Upload` 버튼을 클릭하면 문제 업로드 모달이 나오게 되어요.
 
 Sample Excel 파일을 다운로드하여 문제 정보를 수정한 후 업로드해 주세요.
+
+![image](https://github.com/user-attachments/assets/933e17e4-be42-4c17-9bba-387d207c2faf)
 
 예를 들어, Sample Excel 파일을 그대로 업로드하면,
 ![image](https://github.com/user-attachments/assets/006b1533-db0a-442a-ba95-9d7538081b45)
