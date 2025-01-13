@@ -70,7 +70,7 @@
 
 각 제출 내역을 클릭하면, 해당 제출 내역의 **테스트케이스 별 제출 결과**와 **소스 코드**를 볼 수 있어요.
 
-![All Submissions Page](https://github.com/user-attachments/assets/7ed178e7-1efa-4e8e-bbc3-a86be4004752)   
+![submission detail 모달](https://github.com/user-attachments/assets/8fba94ec-12f8-43f9-8a98-fcaa263d107f)   
 
 ## 제출 내역 내보내기 ##   
 
