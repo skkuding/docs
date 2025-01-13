@@ -2,6 +2,7 @@
 
 공개 처리된 코드당의 모든 문제들을 이 페이지에서 볼 수 있어요. 
 
+![image](https://github.com/user-attachments/assets/fd3b86bb-d6b4-4846-b950-f25cd474f8ac)
 
 
 ## 문제 리스트 ##
