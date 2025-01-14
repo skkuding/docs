@@ -147,7 +147,7 @@ export default defineConfig({
           items: [
             {
               text: '가입 및 로그인',
-              link: '/user/group'
+              link: '/user/login'
             }
           ]
         },
