@@ -143,6 +143,15 @@ export default defineConfig({
 
       '/user/': [
         {
+          text: '일반',
+          items: [
+            {
+              text: '가입 및 로그인',
+              link: '/user/group'
+            }
+          ]
+        },
+        {
           text: '관리자',
           items: [
             {
