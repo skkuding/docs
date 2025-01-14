@@ -1,6 +1,6 @@
 # 대회 참여하기 #
 
-코드당은 **contest**, 즉 대회를 개설해요. 사용자는 대회에 등록하고 기간 내에 대회에 참여할 수 있어요.
+코드당에서 사용자는 대회에 등록하고 기간 내에 대회에 참여할 수 있어요.
 
 본격적으로 코드당의 contest에 대해서 알아보도록 해요.
 
@@ -34,9 +34,8 @@
 <img width="1823" alt="image" src="https://github.com/user-attachments/assets/b75433f2-b526-49f4-b192-48be04a00ce4" />
 
 대회에 참가했다면 문제를 풀어볼게요. Problem 탭에서 대회에 어떤 문제가 있는지 확인할 수 있고, 클릭하면 대회 문제 풀이 IDE로 접속하게 되어요. 
-대회 문제 풀이 IDE의 배치에 관해서는 다음 단락에서 설명할게요.
 
-Problem 탭에서는 대회의 각 문제에서 사용자가 획득한 점수를 확인할 수 있어요.
+문제를 풀고 난 뒤에는 이 화면에서 사용자가 문제별로 획득한 점수를 확인할 수 있어요. 
 
 <img width="1823" alt="image" src="https://github.com/user-attachments/assets/82facac8-113d-4a38-93c8-913acaf7a684" />
 
@@ -54,17 +53,29 @@ Problem 탭에서는 대회의 각 문제에서 사용자가 획득한 점수를
 
   좌측 상단에 있는 문제의 title을 클릭하게 되면 대회에 포함된 문제의 이름이 모두 보이게 돼요. 내가 풀고 싶은 문제의 이름을 클릭하면 그 문제로 이동할 수 있어요.
   그리고, 내가 이미 제출한 문제에는 초록색 체크 표시가 나타나요.
-- **타이머 기능**
-  ![image](https://github.com/user-attachments/assets/dd5d319a-3253-48d6-a9f4-3c9f88b7b205)
 
-  우측 상단에 있는 타이머는 대회 종료까지 남은 시간을 보여줘요. 
-- **코드 비공개 보장**
-  ![image](https://github.com/user-attachments/assets/2ef8c24f-2c1f-4e5a-b756-1b7c44824df6)
+  
+- **자신의 제출 기록만 확인 가능**
 
   일반 문제 풀이 IDE에서는 문제를 맞았을 때 다른 사람의 소스 코드를 볼 수 있지만, **대회 문제 풀이 IDE에서는 문제를 맞아도 다른 사람의 소스 코드를 볼 수 없어요.**
   Submission 탭에서는 오직 나의 소스 코드만 다시 볼 수 있어요.
-- **문제 풀이의 유한성**
+  
+- **채점 결과 가려질 수 있음**
+  ![image](https://github.com/user-attachments/assets/2ef8c24f-2c1f-4e5a-b756-1b7c44824df6)
+
+  관리자의 설정에 따라 대회 문제의 채점 결과는 가려질 수 있어요.
+
+  채점 결과가 가려지게 되면 채점은 정상적으로 진행되지만, 그 결과는 Blind로 표시되어요. 
+  
+- **시간 제한**
+  ![image](https://github.com/user-attachments/assets/dd5d319a-3253-48d6-a9f4-3c9f88b7b205)
+
+  우측 상단에 있는 타이머는 대회 종료까지 남은 시간을 보여줘요.
+  **대회 종료 시간이 되면 아래와 같이 더 이상 해당 대회의 문제 풀이 IDE을 사용하거나 제출할 수 없어요.**
+  
   ![image](https://github.com/user-attachments/assets/7e79390c-67bd-4f3f-8da6-a65a5e27ebc6)
 
-  **대회 종료 시간이 되면 더 이상 해당 대회의 문제 풀이 IDE을 사용할 수 없어요.**
   만약 대회가 끝나고 나의 소스 코드를 다시 보고 싶다면, 해당 대회 페이지의 문제 목록에서 `My Submission` 아이콘을 클릭해 주세요.
+
+  <img width="1823" alt="image" src="https://github.com/user-attachments/assets/c838aa47-65d7-4d0f-b711-4539518be684" />
+
