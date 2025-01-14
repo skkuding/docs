@@ -5,14 +5,14 @@
 본격적으로 코드당의 contest에 대해서 알아보도록 해요.
 
 ## 대회 목록보기 ##
-![image](https://github.com/user-attachments/assets/450926aa-8a77-4edd-891e-f4b08b1fa506)
+<img width="1823" alt="image" src="https://github.com/user-attachments/assets/4c1a09e9-575a-4aee-b06c-c259cbfae9ee" />
 
-- **`Ongoing contest`** * : 현재 참여 가능한 contest 카드들이 나타나요. 등록하고 바로 대회에 참여할 수 있어요.
-  ![image](https://github.com/user-attachments/assets/5ccf0d5d-d173-4664-a190-77d999401233)
+
+- **`Join the contest now!`** * : 현재 참여 가능한 Ongoing contest 카드들이 나타나요. 등록하고 바로 대회에 참여할 수 있어요.
 
     **대회 기간**과 **종료까지 남은 기간**을 확인할 수 있어요.
-- **`Upcoming Contest`** * : 아직 열리지 않은 contest 카드들이 나타나요. 아직 등록할 수 없어요.
-  ![image](https://github.com/user-attachments/assets/c8aa07cf-afef-4b2d-999e-db44636831cc)
+- **`Check out upcoming contests`** * : 아직 시작되지 않은 contest 카드들이 나타나요. 아직 등록할 수 없어요.
+  
 
     **대회 기간**과 **시작까지 남은 기간**을 확인할 수 있어요.
 - **`Finished Contest`** * : 종료된 contest들의 **참여자 수**, **대회 기간**, **등록 여부** 등의 정보를 볼 수 있어요.
@@ -20,6 +20,27 @@
 
 - **`Registered Contest`** * : 사용자가 등록한 contest들의 **현재 상태**, **참여자 수**, **대회 기간** 등의 정보를 볼 수 있어요.
     ![image](https://github.com/user-attachments/assets/07302d76-89ff-4548-a20c-c021e9de9ecc)
+
+## 대회 참가하기
+
+그렇다면 이제 대회에 참가해볼게요.
+참가하고자 하는 진행중인 대회 페이지에 접속해주세요.
+
+접속하면, 다음과 같이 대회 설명을 볼 수 있고, 참여 버튼이 활성화되어 있어요.
+<img width="1823" alt="image" src="https://github.com/user-attachments/assets/20cd1bba-d966-482f-80ed-4d6d57465a6a" />
+
+관리자의 설정에 따라 바로 참여할 수도 있고, 초대 코드를 입력해야할 수도 있어요. 초대 코드가 있는 경우 입력해주세요.
+
+<img width="1823" alt="image" src="https://github.com/user-attachments/assets/b75433f2-b526-49f4-b192-48be04a00ce4" />
+
+대회에 참가했다면 문제를 풀어볼게요. Problem 탭에서 대회에 어떤 문제가 있는지 확인할 수 있고, 클릭하면 대회 문제 풀이 IDE로 접속하게 되어요. 
+대회 문제 풀이 IDE의 배치에 관해서는 다음 단락에서 설명할게요.
+
+Problem 탭에서는 대회의 각 문제에서 사용자가 획득한 점수를 확인할 수 있어요.
+
+<img width="1823" alt="image" src="https://github.com/user-attachments/assets/82facac8-113d-4a38-93c8-913acaf7a684" />
+
+
 
 
 ## 대회 문제 풀이 IDE ##
