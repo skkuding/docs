@@ -148,11 +148,11 @@ export default defineConfig({
             {
               text: '가입 및 로그인',
               link: '/user/login'
-            }
+            },
             {
               text: '대회 관리자 권한',
               link: '/user/contest-role-250404'
-            }
+            },
             {
               text: '대회 리더보드',
               link: '/user/contest-leaderboard-250404'
