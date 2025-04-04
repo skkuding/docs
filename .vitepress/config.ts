@@ -149,6 +149,14 @@ export default defineConfig({
               text: '가입 및 로그인',
               link: '/user/login'
             }
+            {
+              text: '대회 관리자 권한',
+              link: '/user/contest-role-250404'
+            }
+            {
+              text: '대회 리더보드',
+              link: '/user/contest-leaderboard-250404'
+            }
           ]
         },
         {
@@ -156,19 +164,19 @@ export default defineConfig({
           items: [
             {
               text: '문제 생성하기',
-              link: '/user/problem-create'
+              link: '/user/problem-create-250404'
             },
             {
               text: '문제 관리하기',
               link: '/user/problem-manage'
             },
             {
-              text: '대회 생성하기',
-              link: '/user/contest-create'
+              text: '대회 개최하기',
+              link: '/user/create-contest-250404'
             },
             {
               text: '대회 관리하기',
-              link: '/user/contest-manage'
+              link: '/user/contest-management-250404'
             }
           ]
         },
