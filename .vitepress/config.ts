@@ -143,7 +143,7 @@ export default defineConfig({
 
       '/user/': [
         {
-          text: '일반',
+          text: '일반',
           items: [
             {
               text: '가입 및 로그인',
