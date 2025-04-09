@@ -2,7 +2,7 @@
 
 본 Section에서는 대회를 개최하는 방법을 설명합니다.    
 대회 개최는 Contest Admin 권한을 가진 사용자만 가능합니다.    
-권한을 얻을 수 있는 방법이 궁금하다면 여기를 클릭해주세요!    
+권한을 얻을 수 있는 방법이 궁금하다면 [여기](https://docs.codedang.com/user/contest-role-250404.html)를 클릭해주세요!    
 
 ---
 
