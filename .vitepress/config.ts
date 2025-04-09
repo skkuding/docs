@@ -148,7 +148,12 @@ export default defineConfig({
             {
               text: '가입 및 로그인',
               link: '/user/login'
-            },
+            }
+          ]
+        }
+        {
+          text: '대회/일반',
+          items: [
             {
               text: '대회 관리자 권한',
               link: '/user/contest-role-250404'
@@ -160,7 +165,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '관리자',
+          text: '대회/관리자',
           items: [
             {
               text: '문제 생성하기',
@@ -171,7 +176,7 @@ export default defineConfig({
               link: '/user/problem-manage'
             },
             {
-              text: '대회 개최하기',
+             text: '대회 개최하기',
               link: '/user/create-contest-250404'
             },
             {
@@ -181,15 +186,49 @@ export default defineConfig({
           ]
         },
         {
-          text: '사용자',
+          text: '대회/사용자',
           items: [
-            {
-              text: '문제 풀기',
-              link: '/user/problem-solve'
-            },
             {
               text: '대회 참여하기',
               link: '/user/contest-participate'
+            },
+            {
+              text: '공개된 문제 풀기',
+              link: '/user/problem-solve'
+            },
+          ]
+        },
+        {
+          text: '강의/관리자',
+          items: [
+            {
+              text: '문제 생성하기',
+              link: '/user/problem-create-250404'
+            },
+            {
+              text: '문제 관리하기',
+              link: '/user/problem-manage'
+            },
+            {
+              text: '강의 개설하기',
+              link: '/user/create-contest-250404'
+            },
+            {
+              text: '강의 관리하기',
+              link: '/user/contest-management-250404'
+            }
+          ]
+        },
+        {
+          text: '강의/사용자',
+          items: [
+            {
+              text: '강의 참여하기',
+              link: '/user/contest-participate'
+            },
+            {
+              text: '공개된 문제 풀기',
+              link: '/user/problem-solve'
             }
           ]
         }
