@@ -1,5 +1,3 @@
-![edit contest](https://github.com/user-attachments/assets/e0aea4fe-de43-422d-849b-fe684ccf3e0a)
-
 # 대회 관리하기
 
 본 Section에서는 대회를 관리하는 방법에 대해서 소개합니다.   
