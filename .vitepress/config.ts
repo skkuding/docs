@@ -150,7 +150,7 @@ export default defineConfig({
               link: '/user/login'
             }
           ]
-        }
+        },
         {
           text: '대회/일반',
           items: [
