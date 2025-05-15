@@ -17,7 +17,7 @@
    - 오답인 문제에 대해서는 패널티 점수를 계산하지 않아요.
    - 아래는 패널티 점수의 계산 예시예요.
    ![rank_example](https://github.com/user-attachments/assets/9e0a38a6-cea4-4ed9-a46d-d08b0e3bd735)
-3. Accepted한 문제의 수와 패널티 점수가 모두 같다면, 둘 중 Accepted한 소스 코드를 먼저 제출한 사람이 더 높은 순위를 차지해요.
+3. Accepted한 문제의 수와 패널티 점수가 모두 같다면, **Accepted한 소스 코드를 먼저 제출한 사람**이 더 높은 순위를 차지해요.
 
 ## 리더보드의 구성
 
