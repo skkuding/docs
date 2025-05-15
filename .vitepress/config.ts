@@ -148,6 +148,10 @@ export default defineConfig({
             {
               text: '가입 및 로그인',
               link: '/user/login'
+            },            
+            {
+              text: '공개된 문제 풀기',
+              link: '/user/problem-solve'
             }
           ]
         },
@@ -190,12 +194,8 @@ export default defineConfig({
           items: [
             {
               text: '대회 참여하기',
-              link: '/user/contest-participate'
-            },
-            {
-              text: '공개된 문제 풀기',
-              link: '/user/problem-solve'
-            },
+              link: '/user/contest-participate-250404'
+            }
           ]
         },
         {
@@ -225,10 +225,6 @@ export default defineConfig({
             {
               text: '강의 참여하기',
               link: '/user/contest-participate'
-            },
-            {
-              text: '공개된 문제 풀기',
-              link: '/user/problem-solve'
             }
           ]
         }
