@@ -211,7 +211,7 @@ export default defineConfig({
             },
             {
               text: '강의 개설하기',
-              link: '/user/course-create-250806.md'
+              link: 'user/course-create-250806.md'
             },
             {
               text: '강의 관리하기',
