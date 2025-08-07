@@ -27,7 +27,7 @@ kubectl konfig import --save config.yaml
 ## 4. kubectl context 설정
 
 `kubectl config get-contexts` 명령어를 실행하여 현재 설정된 context를 확인합니다.
-잘 설정되어있다면 prod와 staging 두 개의 context를 불 수 있습니다.
+잘 설정되어있다면 prod와 staging 두 개의 context를 볼 수 있습니다. (기존 context가 있다면 추가로 생성됩니다.)
 
 ```
 ❯ kubectl config get-contexts
