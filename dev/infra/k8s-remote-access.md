@@ -18,8 +18,6 @@ https://kubernetes.io/ko/docs/tasks/tools
 
 스꾸딩 Notion의 Secrets 페이지에 있는 kubeconfig를 복사하여 로컬에 config.yaml 파일로 저장합니다.
 
-https://www.notion.so/skkuding/Secrets-353a88faeb7a4dbcb472aad6825b372d
-
 이후 아래 명령어를 실행하여 kubeconfig에 저장합니다.
 
 ```
