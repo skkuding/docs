@@ -219,7 +219,7 @@ export default defineConfig({
             },
             {
               text: '강의 관리하기',
-              link: '/user/contest-management-250404'
+              link: 'user/course-management-250806.md'
             }
           ]
         },
