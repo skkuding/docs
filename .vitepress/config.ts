@@ -126,6 +126,10 @@ export default defineConfig({
             {
               text: 'CI/CD (GitHub Actions)',
               link: '/dev/infra/ci-cd'
+            },
+            {
+              text: 'Kubernetes 원격 접근',
+              link: '/dev/infra/k8s-remote-access'
             }
           ]
         },
@@ -148,7 +152,7 @@ export default defineConfig({
             {
               text: '가입 및 로그인',
               link: '/user/login'
-            },            
+            },
             {
               text: '공개된 문제 풀기',
               link: '/user/problem-solve'
