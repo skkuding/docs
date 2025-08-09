@@ -30,7 +30,8 @@
    
    말 그대로 문제의 정보에 관한 내용들을 알 수 있는 패널이에요. 
 
-<img width="1823" alt="layout-problem" src="https://github.com/user-attachments/assets/f2268a1e-033c-4a7f-ae62-c12397a06fd9" />
+<img width="1911" alt="layout-problem-r" src="https://github.com/user-attachments/assets/20b69527-dcb5-4c22-98c5-910da4704ecf" />
+
 
 
    - **`Title`** :문제의 **제목**이 나타나요.
@@ -50,7 +51,8 @@
 ### 2. **문제 제출 패널**(**`Submission`**)
 
   이 패널에서는 사용자들이 제출한 코드에 관한 세부적인 정보들을 알 수 있어요. 
-  <img width="1915" height="977" alt="layout-problem" src="https://github.com/user-attachments/assets/8654eb5c-f65a-4bde-b19d-4dedf2b75d32" />
+
+<img width="1919" alt="layout-problem-sb" src="https://github.com/user-attachments/assets/ec35d428-e3b8-4914-a9b5-c17567b74f10" />
 
 
    - **`#`** : 제출한 코드의 제출 번호가 나타나요.
@@ -85,6 +87,7 @@
      이 버튼을 눌러서 사용자가 원하는 테스트 케이스의 **input값과 output값**을 입력하고 테스트해볼 수 있어요. `+add`버튼을 눌러서 여러 개의 테스트케이스를 추가할 수 있어요.
          
    <img width="1823" alt="image" src="https://github.com/user-attachments/assets/cdc030cf-4a19-44c8-8851-3295fdd3ce38" />
+
 
 
 
