@@ -19,8 +19,9 @@
 ## 일반 문제 풀이 IDE ##
 본격적으로 코드당의 문제풀이 도구들을 살펴보도록 해요. 크게 **문제 정보 패널**(**`Description`**), **문제 제출 패널**(**`Submission`**), **코드 입력 영역**(**`Code Editor`**)
 총 3가지로 구분할 수 있어요.
+<img width="1823" height="977" src="https://github.com/user-attachments/assets/bb7afbe6-4479-4744-ac39-a89cece37678" />
 
-<img width="1823" alt="image" src="https://github.com/skkuding/docs/blob/3f6c9e64e21381cd7d6c8c75e27892b2f7ff5fe2/user/assets/layout-problem.png" />
+
 
 각각에 대해서 알아보도록 해요.
 
@@ -82,6 +83,7 @@
      이 버튼을 눌러서 사용자가 원하는 테스트 케이스의 **input값과 output값**을 입력하고 테스트해볼 수 있어요. `+add`버튼을 눌러서 여러 개의 테스트케이스를 추가할 수 있어요.
          
    <img width="1823" alt="image" src="https://github.com/user-attachments/assets/cdc030cf-4a19-44c8-8851-3295fdd3ce38" />
+
 
 
 
