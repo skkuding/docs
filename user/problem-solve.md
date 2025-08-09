@@ -8,6 +8,7 @@
 ## 문제 리스트 ##
 코드당의 문제들을 다양한 **정렬기준**을 통해 살펴볼 수 있어요. 
 지금부터 정렬기준에 대해 하나씩 알아볼게요.
+<img width="1823" alt="problem-list" src="https://github.com/user-attachments/assets/c2e65403-3541-413d-94df-6d6a60db067a" />
 
 - **`Title`** : 문제의 제목을 검색하여 풀고 싶은 문제를 쉽게 찾을 수 있어요.
 - **`Level`** : 출제자가 미리 설정해 둔 level을 오름차순 또는 내림차순으로 정렬하는 기능을 제공해요.
@@ -85,6 +86,7 @@
      이 버튼을 눌러서 사용자가 원하는 테스트 케이스의 **input값과 output값**을 입력하고 테스트해볼 수 있어요. `+add`버튼을 눌러서 여러 개의 테스트케이스를 추가할 수 있어요.
          
    <img width="1823" alt="image" src="https://github.com/user-attachments/assets/cdc030cf-4a19-44c8-8851-3295fdd3ce38" />
+
 
 
 
