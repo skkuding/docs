@@ -30,7 +30,7 @@
    
    말 그대로 문제의 정보에 관한 내용들을 알 수 있는 패널이에요. 
 
-<img width="1911" alt="layout-problem-r" src="https://github.com/user-attachments/assets/20b69527-dcb5-4c22-98c5-910da4704ecf" />
+<img width="1823" alt="layout-problem-r" src="https://github.com/user-attachments/assets/20b69527-dcb5-4c22-98c5-910da4704ecf" />
 
 
 
@@ -52,7 +52,7 @@
 
   이 패널에서는 사용자들이 제출한 코드에 관한 세부적인 정보들을 알 수 있어요. 
 
-<img width="1919" alt="layout-problem-sb" src="https://github.com/user-attachments/assets/ec35d428-e3b8-4914-a9b5-c17567b74f10" />
+<img width="1823" alt="layout-problem-sb" src="https://github.com/user-attachments/assets/ec35d428-e3b8-4914-a9b5-c17567b74f10" />
 
 
    - **`#`** : 제출한 코드의 제출 번호가 나타나요.
@@ -61,32 +61,31 @@
      
      종류에는 `Accepted`, `Compile Error`, `Runtime Error`, `Time Limit Exceeded`, `Memory Limit Exceeded`, `Output Limit Exceeded`, `Wrong Answer`가 있어요.
    - **`Language`** : 해당 코드를 작성한 언어가 나타나요.
-   - **`Submission Time`** : 해당 코드를 작성한 시간이 `YYYY-MM-DD HH:MM:SS` 형식으로 나타나요.
+   - **`Submission Time`** : 해당 코드를 작성한 시간이 `Month DD, YYYY HH:MM` 형식으로 나타나요.
    - **`Code Size`** : 제출한 코드의 메모리 용량이 `B` 형식으로 나타나요.
 
      **`Submission`** 중 하나를 클릭하게 되면, **해당 사용자가 제출한 코드와 테스트 케이스 채점 결과**를 볼 수 있어요.
-  
-
 
 
 ### 3. **코드 입력 영역**(**`Code Editor`**)
 
    이 패널에서는 코드 작성을 도와주는 여러 도구들을 제공해요.
-  
-   <img width="1823" alt="스크린샷 2025-01-14 오전 9 16 42" src="https://github.com/user-attachments/assets/9d971925-6065-4c4f-b10a-5bb653bc492e" />
+
+
+   <img width="1823" height="983" alt="layout-problem-input" src="https://github.com/user-attachments/assets/3c4a0b74-9228-43b6-bf22-919700b39dc5" />
    
-   
+   - **`언어 설정`** : 작성할 코드의 언어를 설정할 수 있어요. 다양한 언어를 연습해볼 수 있는 장점이 있어요.
    - **`Reset`** : 사용자가 작성한 코드를 모두 지우는 버튼이에요. 처음부터 다시 코드를 짜고 싶을 경우 유용한 버튼이에요.
+  - **`Run`** : 사용자가 작성한 코드를 실행하는 버튼이에요. `Run`을 누르면 작성 중인 코드가 즉시 실행되어 결과를 화면에서 확인할 수 있어요. 코드를 저장하거나 제출하지 않아도 실행해볼 수 있기 때문에, 중간중간 수정한 내용이 잘 작동하는지 확인하는 데 유용해요.
    - **`Save`** : 사용자가 작성한 코드를 저장하는 버튼이에요. 코드를 저장하면 해당 페이지를 나가도 작성했던 코드들이 남아있어요.
    - **`Test`** : 사용자가 작성한 코드에 대해 `sample testcase`와 곧 설명할 `user testcase`를 실행할 수 있는 버튼이에요.
      우측 하단에 테스트한 결과들이 나타나요. 작성한 코드들이 잘 짜여져있는지 최종 제출하기 전에 미리 확인해볼 수 있다는 장점이 있어요.
-      
    - **`Submit`** : 작성한 코드를 제출할 수 있는 버튼이에요. 제출한 후에 곧바로 채점 결과에 대해 알 수 있어요.
-   - **`언어 설정`** : 작성할 코드의 언어를 설정할 수 있어요. 다양한 언어를 연습해볼 수 있는 장점이 있어요.
    - **`Add Testcase(User Testcase)`** : 코드를 짜다보면 sample testcase 이외에도 **추가적으로 테스트 해보고 싶은 testcase**가 생길 수 있어요.
      이 버튼을 눌러서 사용자가 원하는 테스트 케이스의 **input값과 output값**을 입력하고 테스트해볼 수 있어요. `+add`버튼을 눌러서 여러 개의 테스트케이스를 추가할 수 있어요.
          
    <img width="1823" alt="image" src="https://github.com/user-attachments/assets/cdc030cf-4a19-44c8-8851-3295fdd3ce38" />
+
 
 
 
