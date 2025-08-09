@@ -47,7 +47,7 @@
 ### 2. **문제 제출 패널**(**`Submission`**)
 
   이 패널에서는 사용자들이 제출한 코드에 관한 세부적인 정보들을 알 수 있어요. 
-  <img width="1823" alt="스크린샷 2025-01-14 오전 9 14 01" src="https://github.com/skkuding/docs/blob/main/user/assets/layout-problem.png?raw=true" />
+  <img width="1915" height="977" alt="layout-problem" src="https://github.com/user-attachments/assets/8654eb5c-f65a-4bde-b19d-4dedf2b75d32" />
 
 
    - **`#`** : 제출한 코드의 제출 번호가 나타나요.
@@ -82,6 +82,7 @@
      이 버튼을 눌러서 사용자가 원하는 테스트 케이스의 **input값과 output값**을 입력하고 테스트해볼 수 있어요. `+add`버튼을 눌러서 여러 개의 테스트케이스를 추가할 수 있어요.
          
    <img width="1823" alt="image" src="https://github.com/user-attachments/assets/cdc030cf-4a19-44c8-8851-3295fdd3ce38" />
+
 
 
 
