@@ -38,6 +38,7 @@ Sample Testcase에서 `Hidden`을 클릭하면 해당 Testcase는 자동으로 H
 Hidden에서도 직접 Hidden Testcase를 추가할 수 있어요.
 
 <img width="961" alt="기타tc" src="https://github.com/user-attachments/assets/b5f7c9f3-5740-4bda-8af4-ba7dc2382726" />
+
 Zip파일로 `업로드`도 가능해요.
 
 모든 Testcase는 채점에 사용되고 채점 결과가 공개되지만, 
