@@ -215,11 +215,11 @@ export default defineConfig({
             },
             {
               text: '강의 개설하기',
-              link: 'user/course-create-250810.md'
+              link: '/user/course-create-250810.md'
             },
             {
               text: '강의 관리하기',
-              link: 'user/course-management-250810.md'
+              link: '/user/course-management-250810.md'
             }
           ]
         },
@@ -228,7 +228,7 @@ export default defineConfig({
           items: [
             {
               text: '강의 참여하기',
-              link: 'user/course-participate-250810.md'
+              link: '/user/course-participate-250810.md'
             }
           ]
         }
