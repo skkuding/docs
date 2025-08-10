@@ -6,19 +6,27 @@
 ---
 
 강의 개설 및 관리, 문제 출제 등은 Management 페이지에서 가능해요.   
-로그인 후, 화면 상단 우측에 있는 내 ID를 클릭하면 Management 페이지로 이동할 수 있는 메뉴가 나와요.   
-![management](https://github.com/user-attachments/assets/eb0c6024-eb52-4761-acf6-9496ead5cd93)    
+로그인 후, 화면 상단 우측에 있는 내 ID를 클릭하면 Management 페이지로 이동할 수 있는 메뉴가 나와요.  
 
-기본적으로 대회는 Management 페이지의 **Course** 메뉴에서 관리할 수 있어요.  
+<img width="1368" height="874" alt="image" src="https://github.com/user-attachments/assets/20c18e63-896a-47c2-a0c0-286dd06da3eb" />    
+   
+
+
+기본적으로 강의는 Management 페이지의 **Course** 메뉴에서 관리할 수 있어요.  
 우측 상단의 **`+ Create`** 버튼을 누르면 강의의 기본 정보를 입력할 수 있는 페이지로 이동해요.   
-![Contest Management](https://github.com/user-attachments/assets/fda8c9cf-e114-4346-ba26-230a890d54bd)
+
+
+<img width="1893" height="873" alt="image" src="https://github.com/user-attachments/assets/14c52b32-ba09-475b-82cd-1b03f3689c32" />  
+
+
 
 ## 강의 기본 정보 입력
 
 이제 Create Course 페이지에서 새로운 강의를 개설할 수 있어요!   
 지금부터 입력 항목에 대해 알아볼게요. (*은 필수 입력 항목이에요.)      
 
-![Create Contest_수정](https://github.com/user-attachments/assets/2ccb7978-d3f6-41bd-a25b-82f3165ecc94)
+<img width="671" height="500" alt="image" src="https://github.com/user-attachments/assets/859ffc1e-7d09-4b83-a7cf-917f7ec39f16" /><img width="697" height="395" alt="image" src="https://github.com/user-attachments/assets/0dddb3ca-59e4-4c6a-8a55-61b7cc5ff2e7" />  
+
 
 1. **`Professor`** * : 강의의 교수자명을 입력해요.
 
