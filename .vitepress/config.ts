@@ -211,7 +211,7 @@ export default defineConfig({
             },
             {
               text: '문제 관리하기',
-              link: '/user/problem-manage'
+              link: '/user/problem-manage.md'
             },
             {
               text: '강의 개설하기',
