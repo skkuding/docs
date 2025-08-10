@@ -4,7 +4,8 @@
 
 Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제 관리 페이지에 접속할 수 있습니다.
 
-![image](https://github.com/user-attachments/assets/7fbc1b24-5804-4e24-a200-cb080312815f)
+<img width="1714" alt="problem-create" src="https://github.com/user-attachments/assets/05659bc2-46c2-4467-84b3-287ce7bdbe32" />
+
 
 ## 문제 리스트
 Problem List에서는 코드당 내의 모든 문제를 확인할 수 있습니다. 
@@ -13,10 +14,12 @@ Problem List에서는 코드당 내의 모든 문제를 확인할 수 있습니�
 
 ### 문제 삭제하기
 삭제하려는 문제를 체크박스를 통해 선택하고, 오른쪽 위의 🗑(휴지통) 버튼을 클릭해주세요.
-![image](https://github.com/user-attachments/assets/e1111ad8-c2cf-454a-93c2-bc7315fe611b)
+
+<img width="1714" alt="problem-t" src="https://github.com/user-attachments/assets/2b4e45df-1f63-4454-b4cd-3430f944f32e" />
 
 삭제 재확인 대화 상자가 나타나면, `Delete` 버튼을 클릭하여 문제를 삭제할 수 있어요.
-![image](https://github.com/user-attachments/assets/16990ebb-1aef-4c74-aa08-8e459a8f147d)
+
+<img width="1714" alt="problem-t" src="https://github.com/user-attachments/assets/11728302-3caf-4dac-a558-85eb978cc179" />
 
 
 ### 문제 공개/비공개 설정
@@ -27,17 +30,21 @@ Problem List에서는 코드당 내의 모든 문제를 확인할 수 있습니�
 시작 전 또는 진행 중인 **대회에 포함된 문제는 자동으로 비공개 처리**되며, 공개 여부를 변경할 수 없어요.
 단, 끝난 대회에 속한 문제는 공개할 수 있어요.
 
-![스크린샷 2025-01-14 오전 3 04 08](https://github.com/user-attachments/assets/32e952ad-d831-409f-b235-8cf5ed05936d)
+<img width="1714" alt="problem-t" src="https://github.com/user-attachments/assets/a94e142b-699d-4b50-89c4-f5b4fdc8ffc8" />
+
 
 ### 이 문제가 포함된 대회 보기
 
 문제별로 포함된 대회를 확인할 수 있습니다.
 
 Visible 토글 옆의 `info` 아이콘을 클릭하면,
-![스크린샷 2025-01-14 오전 3 11 43](https://github.com/user-attachments/assets/a498762a-44fd-495a-a23e-7d7a3f711ee8)
+
+<img width="1714" height="968" alt="problem-t" src="https://github.com/user-attachments/assets/40c227d0-11a3-4f3e-bffc-3d4838213ebd" />
+
 
 문제가 포함된 Contest들을 확인할 수 있습니다.
-![image](https://github.com/user-attachments/assets/e3222d95-ae04-4973-a2a5-62589a6d0db2)
+
+<img width="1714" alt="problem-t" src="https://github.com/user-attachments/assets/226b46ba-2769-423f-8e1c-a8e470a97ed6" />
 
 
 ## 문제 상세 내역
@@ -78,6 +85,7 @@ Problem List에서 각 열을 클릭하여 문제 상세 페이지로 이동할 
 ![스크린샷 2025-01-14 오전 3 33 32](https://github.com/user-attachments/assets/dbcfeaf9-de24-4c4d-b8b3-a78ddb9b8b88)
 
 - 수정 정보가 문제의 Update History에 기록되어 모든 사용자는 문제가 업데이트되었음을 알 수 있습니다. (기능 구현중)
+
 
 
 
