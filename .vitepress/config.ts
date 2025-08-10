@@ -228,7 +228,7 @@ export default defineConfig({
           items: [
             {
               text: '강의 참여하기',
-              link: '/user/contest-participate'
+              link: 'user/course-participate-250810.md'
             }
           ]
         }
