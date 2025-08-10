@@ -11,7 +11,7 @@ Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제
 
 <img width="1823" alt="problem-create" src="https://github.com/user-attachments/assets/fc0f41f2-fa1a-4c2b-90b5-18c570ec4f78" />
 
-오른쪽 상단의 `+ Create` 버튼을 클릭하면 문제 생성 페이지로 이동할 수 있어요.
+오른쪽 상단의 `+ Create` 버튼을 클릭하면 문제 생성 페이지로 이동할 수 있어요. 
 
 
 ### 문제 기본 정보 작성하기
