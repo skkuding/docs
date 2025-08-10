@@ -37,7 +37,8 @@ Management 페이지의 왼쪽에 있는 `Problem` 버튼을 클릭하면 문제
 Sample Testcase에서 `Hidden`을 클릭하면 해당 Testcase는 자동으로 Hidden Testcase로 넘어가요.
 Hidden에서도 직접 Hidden Testcase를 추가할 수 있어요.
 
-<img width="961" alt="기타tc" src="https://github.com/user-attachments/assets/b5f7c9f3-5740-4bda-8af4-ba7dc2382726" />
+<img width="1260" alt="upload" src="https://github.com/user-attachments/assets/b8b985b6-9dfc-424f-a78d-0c39de088259" />
+
 
 Zip파일로 `업로드`도 가능해요.
 
