@@ -207,7 +207,7 @@ export default defineConfig({
           items: [
             {
               text: '문제 생성하기',
-              link: '/user/problem-create-250404'
+              link: '/user/problem-create-250810'
             },
             {
               text: '문제 관리하기',
