@@ -121,10 +121,10 @@
 
 ### 개별 과제 보기
 Assignment List에서 과제를 클릭하면 해당 과제의 정보를 열람하거나 수정할 수 있어요.  
-과제 상세 페이지에는 진행 상태, Start time, End time, 그리고 Due time이 나타나 있어요.  
-`Edit` 버튼을 클릭하면 과제 수정 페이지로 이동해요.  
-과제의 수정 과정은 과제 생성과 똑같으니, 생성 방법을 참고하면 돼요.  
-Information 탭에서는 과제에 대한 상세 설명, 포함된 문제, 설정 등을 확인할 수 있어요.  
+과제 상세 페이지에는 진행 상태, Start time, End time, 그리고 Due time이 나타나 있어요.    
+`Edit` 버튼을 클릭하면 과제 수정 페이지로 이동해요.    
+과제의 수정 과정은 과제 생성과 똑같으니, 생성 방법을 참고하면 돼요.    
+Information 탭에서는 과제에 대한 상세 설명, 포함된 문제, 설정 등을 확인할 수 있어요.    
  <img width="1887" height="875" alt="image" src="https://github.com/user-attachments/assets/87cae538-474f-4924-a4b8-ef2f03913e1f" />  
 
 이제 제출된 코드를 확인하고 성적을 관리하는 과정에 대해 알아볼게요! 
@@ -244,11 +244,11 @@ Information 탭에서는 과제에 대한 상세 설명, 포함된 문제, 설�
 `Create` 버튼을 누르면 Exercise List에서 내 연습 문제를 볼 수 있어요!😃  
 
 ### 개별 연습 문제 보기
-Exercise List에서 연습 문제를 클릭하면 해당 연습 문제의 정보를 열람하거나 수정할 수 있어요.  
-연습 문제 상세 페이지에는 진행 상태, Start time, End time, 그리고 Due time이 나타나 있어요.  
-`Edit` 버튼을 클릭하면 연습 문제 수정 페이지로 이동해요.
-연습 문제의 수정 과정은 생성 방법과 똑같으니, 생성 방법을 참고하면 돼요.
-Information 탭에서는 연습 문제에 대한 상세 설명, 포함된 문제, 설정 등을 확인할 수 있어요.  
+Exercise List에서 연습 문제를 클릭하면 해당 연습 문제의 정보를 열람하거나 수정할 수 있어요.    
+연습 문제 상세 페이지에는 진행 상태, Start time, End time, 그리고 Due time이 나타나 있어요.    
+`Edit` 버튼을 클릭하면 연습 문제 수정 페이지로 이동해요.    
+연습 문제의 수정 과정은 생성 방법과 똑같으니, 생성 방법을 참고하면 돼요.    
+Information 탭에서는 연습 문제에 대한 상세 설명, 포함된 문제, 설정 등을 확인할 수 있어요.    
    <img width="1898" height="873" alt="image" src="https://github.com/user-attachments/assets/ceb3e480-55fc-407e-916f-b91f780ba06f" />
 
 이제 제출된 코드를 확인하는 과정에 대해 알아보아요.  
