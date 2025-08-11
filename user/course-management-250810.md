@@ -163,7 +163,7 @@ Information 탭에서는 과제에 대한 상세 설명, 포함된 문제, 설�
 
 **1. 성적 관리**  
  - `Show Scores to Students`: 성적 공개 여부를 선택할 수 있어요. 스위치를 켜서 학생들의 채점 결과와 코멘트를 개별적으로 공개해요.  
- - `Download as a CSV`: 전체 채점 결과를 CSV로 다운로드 받을 수 있어요. 버튼을 누르면 제출한 사람의 학번, 이름, 총점, 그리고 문제별 점수를 정리한 Excel 표를 볼 수 있어요.
+ - `Download as a CSV`: 전체 채점 결과를 CSV로 다운로드 받을 수 있어요. 버튼을 누르면 제출한 사람의 학번, 이름, 총점, 그리고 문제별 점수를 정리한 Excel 표를 볼 수 있어요.    
    예시: <img width="567" height="132" alt="image" src="https://github.com/user-attachments/assets/50758d89-d482-486d-9012-c93449d5bebf" />  
 
 
