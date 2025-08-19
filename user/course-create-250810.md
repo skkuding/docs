@@ -25,7 +25,8 @@
 이제 Create Course 페이지에서 새로운 강의를 개설할 수 있어요!   
 지금부터 입력 항목에 대해 알아볼게요. (*은 필수 입력 항목이에요.)      
 
-<img width="671" height="500" alt="image" src="https://github.com/user-attachments/assets/859ffc1e-7d09-4b83-a7cf-917f7ec39f16" /><img width="697" height="395" alt="image" src="https://github.com/user-attachments/assets/0dddb3ca-59e4-4c6a-8a55-61b7cc5ff2e7" />  
+<img width="808" height="636" alt="image" src="https://github.com/user-attachments/assets/8ba2478b-dd56-4c12-b351-af17417443b6" />
+  
 
 
 1. **`Professor`** * : 강의의 교수자명을 입력해요.
