@@ -39,3 +39,17 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<MASTER_IP>:6443 K3S_TOKEN=<TOKEN
 ```
 
 이후 `kubectl get nodes` 명령어를 통해 노드가 정상적으로 추가되었는지 확인할 수 있습니다.
+
+## Production과 Stage 클러스터의 차이
+
+### Stage 클러스터에는 PostgreSQL과 MinIO가 구성되어 있습니다.
+
+...
+
+### Production 클러스터에는 Argo CD가 구성되어 있습니다.
+
+...
+
+### Preview 환경은 Stage 클러스터에 존재합니다.
+
+...

@@ -139,6 +139,18 @@ export default defineConfig({
                   link: '/dev/infra/k8s/cluster'
                 },
                 {
+                  text: 'Overall Architecture',
+                  link: '/dev/infra/k8s/architecture'
+                },
+                {
+                  text: 'Kustomize',
+                  link: '/dev/infra/k8s/kustomize'
+                },
+                {
+                  text: 'Managing Secrets',
+                  link: '/dev/infra/k8s/secrets'
+                },
+                {
                   text: 'Argo CD',
                   link: '/dev/infra/k8s/argo-cd'
                 }
