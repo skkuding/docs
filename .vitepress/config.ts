@@ -130,6 +130,14 @@ export default defineConfig({
             {
               text: 'Kubernetes 원격 접근',
               link: '/dev/infra/k8s-remote-access'
+            },
+            {
+              text: 'Kubernetes Cluster',
+              link: '/dev/infra/k8s-cluster'
+            },
+            {
+              text: 'Argo CD',
+              link: '/dev/infra/argo-cd'
             }
           ]
         },
