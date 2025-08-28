@@ -1,4 +1,4 @@
-# Kubernetes Cluster
+# Cluster
 
 코드당의 Kubernetes 클러스터는 두 개의 환경(production, staging)으로 구성되어 있습니다.
 

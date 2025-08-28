@@ -128,16 +128,21 @@ export default defineConfig({
               link: '/dev/infra/ci-cd'
             },
             {
-              text: 'Kubernetes 원격 접근',
-              link: '/dev/infra/k8s-remote-access'
-            },
-            {
-              text: 'Kubernetes Cluster',
-              link: '/dev/infra/k8s-cluster'
-            },
-            {
-              text: 'Argo CD',
-              link: '/dev/infra/argo-cd'
+              text: 'Kubernetes',
+              items: [
+                {
+                  text: 'How to access from remote',
+                  link: '/dev/infra/k8s/remote-access'
+                },
+                {
+                  text: 'Cluster',
+                  link: '/dev/infra/k8s/cluster'
+                },
+                {
+                  text: 'Argo CD',
+                  link: '/dev/infra/k8s/argo-cd'
+                }
+              ]
             }
           ]
         },
@@ -192,7 +197,7 @@ export default defineConfig({
               link: '/user/problem-manage'
             },
             {
-             text: '대회 개최하기',
+              text: '대회 개최하기',
               link: '/user/create-contest-250404'
             },
             {
