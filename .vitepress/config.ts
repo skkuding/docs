@@ -86,6 +86,10 @@ export default defineConfig({
           text: 'Project',
           items: [
             {
+              text: '배포 프로세스',
+              link: '/dev/project/release'
+            },
+            {
               text: '프로젝트 구조',
               link: '/dev/project/architecture'
             },
