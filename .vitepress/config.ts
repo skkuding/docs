@@ -135,7 +135,7 @@ export default defineConfig({
               text: 'Kubernetes',
               items: [
                 {
-                  text: 'How to access from remote',
+                  text: 'Remote Access',
                   link: '/dev/infra/k8s/remote-access'
                 },
                 {
