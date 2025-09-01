@@ -126,6 +126,7 @@ export default defineConfig({
 
         {
           text: 'Infra',
+          collapsed: false,
           items: [
             {
               text: 'CI/CD (GitHub Actions)',
@@ -161,6 +162,10 @@ export default defineConfig({
                 {
                   text: 'Argo CD',
                   link: '/dev/infra/k8s/argo-cd'
+                },
+                {
+                  text: 'Operator',
+                  link: '/dev/infra/k8s/operator'
                 }
               ]
             }
