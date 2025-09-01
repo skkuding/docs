@@ -156,7 +156,7 @@ export default defineConfig({
                   link: '/dev/infra/k8s/ingress'
                 },
                 {
-                  text: 'Managing Secrets',
+                  text: 'Secrets',
                   link: '/dev/infra/k8s/secrets'
                 },
                 {
