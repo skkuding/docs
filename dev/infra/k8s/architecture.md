@@ -9,17 +9,7 @@
 도메인 관리는 AWS Route53을 사용하고 있습니다.
 도메인 record들은 쿠버네티스 클러스터의 Node(동아리 서버) IP로 연결되어 있습니다.
 
-각 DNS record는 Terraform으로 관리되고 있습니다. 예를 들어 `codedang.com` 도메인은 다음과 같이 정의되어 있습니다.
-
-```terraform
-resource "aws_route53_record" "codedang" {
-  name    = "codedang.com"
-  zone_id = data.aws_route53_zone.codedang.zone_id  # Route53 Hosted Zone of 'codedang.com'
-  type    = "A"
-  records = local.prod_cluster_ip # IP addresses of the Kubernetes nodes
-  ttl     = 300
-}
-```
+각 DNS record는 Terraform으로 관리되고 있어, 새로운 record를 추가하거나 수정할 때는 Terraform 코드를 업데이트한 후 `terraform apply` 명령어를 실행해야 합니다.
 
 ### Ingress
 

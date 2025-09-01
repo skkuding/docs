@@ -152,12 +152,12 @@ export default defineConfig({
                   link: '/dev/infra/k8s/kustomize'
                 },
                 {
-                  text: 'Managing Secrets',
-                  link: '/dev/infra/k8s/secrets'
-                },
-                {
                   text: 'Ingress',
                   link: '/dev/infra/k8s/ingress'
+                },
+                {
+                  text: 'Managing Secrets',
+                  link: '/dev/infra/k8s/secrets'
                 },
                 {
                   text: 'Argo CD',
