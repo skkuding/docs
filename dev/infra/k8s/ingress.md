@@ -3,7 +3,10 @@
 Ingress는 Kubernetes의 핵심 resource 중 하나로, 외부에서 클러스터 내부의 서비스로 HTTP 및 HTTPS 트래픽을 라우팅하는 역할을 합니다.
 Ingress는 domain-based routing, TLS termination, load balancing 등 다양한 기능을 제공합니다.
 
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="550" src="https://embed.figma.com/board/XYQdgzT4zQEjpNP2IM2FPB/Codedang-Docs?node-id=1309-321&embed-host=share" allowfullscreen></iframe>
+
 Kubernetes에서 Ingress를 사용하려면 Ingress Controller가 필요합니다.
+Ingress Controller는 정의된 Ingress 리소스를 읽어들여 실제로 트래픽을 라우팅하는 역할을 합니다.
 코드당은 Traefik Ingress Controller를 사용하고 있습니다.
 Traefik의 장점은 다음과 같습니다.
 
