@@ -76,6 +76,8 @@ Sealed Secret을 생성하려면 `kubeseal`를 설치해야 합니다.
 
 External Secrets는 외부 비밀 관리 시스템(예: AWS Secrets Manager, HashiCorp Vault 등)과 Kubernetes Secret을 연동하는 도구입니다.
 코드당에서 대부분의 경우 Sealed Secret을 사용하여 Secret을 관리하지만, AWS와 관련된 Secret은 AWS Secret Manager와 연동해 External Secrets를 사용하여 관리하고 있습니다.
+이를 사용하면 Terraform으로 AWS에 사용되는 값을 불러와, AWS Secret Manager에 저장한 후 Kubernetes Secret으로 자동 생성할 수 있습니다.
+직접 Secret 값을 복사하여 Git에 저장할 필요가 없기 때문에, 보안상 더 안전합니다.
 
 ### SecretStore와 ExternalSecret
 
@@ -179,7 +181,7 @@ metadata:
 ### Sealed Secret과 함께 사용하기
 
 Sealed Secret과 reflector를 함께 사용할 수도 있습니다.
-다만 Sealed Secret은 다음과 같이 annotation을 Sealed Secret resource가 아닌, template.metadata에 추가해야 합니다.
+다만 Sealed Secret은 다음과 같이 annotation을 Sealed Secret resource가 아닌, spec.template.metadata에 추가해야 합니다.
 
 ```yaml
 apiVersion: bitnami.com/v1alpha1
