@@ -39,7 +39,7 @@ TLS 인증서를 발급 받기 위한 challenge 방식은 크게 http01과 dns01
 
 Ingress 리소스에서 `cert-manager.io/cluster-issuer` annotation을 사용하여 ClusterIssuer를 지정할 수 있습니다.
 
-```yaml
+```yaml{5-6,9-12}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

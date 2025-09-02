@@ -142,7 +142,7 @@ Kubernetes에서 모든 resource는 namespace에 종속됩니다.
 코드당에서는 [kubernetes-reflector](https://github.com/emberstack/kubernetes-reflector)를 이용하여 특정 namespace의 Secret을 다른 namespace로 복제(mirror)하고 있습니다.
 예를 들어 다음과 같은 Secret을 복제하려고 한다면,
 
-```yaml
+```yaml{6-7}
 apiVersion: v1
 kind: Secret
 metadata:
@@ -161,7 +161,7 @@ stringData:
 
 실제로 복사될 Secret에는 다음과 같은 annotation을 추가합니다.
 
-```yaml
+```yaml{6-7}
 apiVersion: v1
 kind: Secret
 metadata:
@@ -183,7 +183,7 @@ metadata:
 Sealed Secret과 reflector를 함께 사용할 수도 있습니다.
 다만 Sealed Secret은 다음과 같이 annotation을 Sealed Secret resource가 아닌, spec.template.metadata에 추가해야 합니다.
 
-```yaml
+```yaml{12-13}
 apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
 metadata:
