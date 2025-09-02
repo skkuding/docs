@@ -18,6 +18,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Shallow clone is disabled for vitepress 'last-updated' feature
+          # https://vitepress.dev/reference/default-theme-last-updated
+          fetch-depth: 0
+
       - uses: skkuding/codedang/.github/actions/setup-pnpm@main
 
       - name: Build documentation
