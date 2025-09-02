@@ -71,7 +71,7 @@ Wildcard 도메인은 dns01 challenge가 필요하기 때문에, `letsencrypt-dn
 Ingress 리소스를 생성하기 전에, 도메인에 대한 DNS record를 설정해야 합니다.
 코드당에서는 AWS Route53을 사용하고 있으며, 각 도메인의 A 레코드는 클러스터의 Node IP로 설정되어 있습니다.
 
-Route53 record는 Terraform으로 관리되고 있기 때문에, 새로운 record를 추가하거나 수정할 때는 Terraform 코드를 업데이트한 후 `terraform apply` 명령어를 실행해야 합니다.
+Route53 record는 Terraform으로 관리되고 있기 때문에 새로운 record를 추가하거나 수정할 때는 Terraform 코드를 업데이트한 후 `terraform apply` 명령어를 실행해야 합니다.
 예를 들어, `codedang.com` 도메인의 A 레코드는 다음과 같이 정의되어 있습니다.
 
 ```terraform
