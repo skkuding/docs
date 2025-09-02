@@ -52,6 +52,26 @@ NAME                                    ALLREPLICASREADY   RECONCILESUCCESS   AG
 rabbitmqcluster.rabbitmq.com/rabbitmq   True               True               15d
 ```
 
+이를 관리하는 Custom Controller는 rabbitmq-system namespace에 배포되어 있습니다.
+
+```
+❯ kubectl get all -n rabbitmq-system
+NAME                                               READY   STATUS    RESTARTS   AGE
+pod/messaging-topology-operator-67479c576c-8b2lt   1/1     Running   0          15d
+pod/rabbitmq-cluster-operator-78bb8bc45c-2fwtp     1/1     Running   0          15d
+
+NAME                      TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/webhook-service   ClusterIP   10.43.143.53   <none>        443/TCP   15d
+
+NAME                                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/messaging-topology-operator   1/1     1            1           15d
+deployment.apps/rabbitmq-cluster-operator     1/1     1            1           15d
+
+NAME                                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/messaging-topology-operator-67479c576c   1         1         1       15d
+replicaset.apps/rabbitmq-cluster-operator-78bb8bc45c     1         1         1       15d
+```
+
 ## Controller vs Operator
 
 Controller와 Operator는 밀접한 관련이 있지만, 약간의 차이가 있습니다.
