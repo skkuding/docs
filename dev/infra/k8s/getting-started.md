@@ -1,0 +1,79 @@
+# Getting Started with Kubernetes
+
+코드당은 Stateless한 서비스들을 동아리 서버 내 Kubernetes 클러스터에 배포하여 운영하고 있습니다.
+Kubernetes의 복잡한 개념과 설정이 처음 접하는 분들에게는 어려울 수 있지만, **'정의된 상태(desired state)를 최대한 유지한다'** 는 Kubernetes의 철학을 이해하면, 조금 더 쉽게 이해할 수 있습니다.
+
+## Remote Access to Kubernetes
+
+원격으로 코드당의 Kubernetes 클러스터에 접근하는 방법을 소개합니다.
+
+### 1. kubectl 설치
+
+아래 공식 문서를 참고하여 kubectl을 설치해주세요.
+
+https://kubernetes.io/ko/docs/tasks/tools
+
+### 2. krew와 konfig 설치
+
+- kubectl의 플러그인 관리 도구인 krew를 설치합니다. (https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
+
+- kubeconfig를 관리하는 konfig 플러그인을 설치합니다. (`kubectl krew install konfig`)
+
+### 3. kubeconfig 파일 설정
+
+스꾸딩 Notion의 Secrets 페이지에 있는 kubeconfig를 복사하여 로컬에 config.yaml 파일로 저장합니다.
+
+이후 아래 명령어를 실행하여 kubeconfig에 저장합니다.
+
+```
+kubectl konfig import --save config.yaml
+```
+
+### 4. kubectl context 설정
+
+`kubectl config get-contexts` 명령어를 실행하여 현재 설정된 context를 확인합니다.
+잘 설정되어있다면 prod와 staging 두 개의 context를 볼 수 있습니다. (기존 context가 있다면 추가로 생성됩니다.)
+
+```
+❯ kubectl config get-contexts
+CURRENT   NAME    CLUSTER   AUTHINFO     NAMESPACE
+*         prod    prod      prod-user
+          stage   stage     stage-user
+```
+
+이후 원하는 context를 선택합니다. 예를 들어 prod context를 사용하고 싶다면 아래 명령어를 실행합니다.
+
+```
+kubectl config use-context prod
+```
+
+### 5. VPN 접속 후 kubectl 사용
+
+교내 VPN에 접속해야 클러스터에 접근할 수 있습니다.
+아직 VPN을 신청하지 않았다면 [VPN 사용 안내](https://vpninfo.skku.edu/) 페이지를 참고하여 신청해주세요.
+
+이후 자유롭게 kubectl 명령어를 사용할 수 있습니다.
+
+```
+❯ kubectl get nodes
+NAME            STATUS   ROLES                  AGE   VERSION
+skkuding-4f-2   Ready    control-plane,master   61d   v1.32.5+k3s1
+skkuding-4f-3   Ready    <none>                 60d   v1.32.5+k3s1
+skkuding-4f-4   Ready    <none>                 60d   v1.32.5+k3s1
+```
+
+## Core Principles
+
+코드당의 Kubernetes 클러스터 운영의 핵심 원칙은 다음과 같습니다.
+
+- 모든 변경 및 새로운 기능은 stage 환경에서 실험하고, prod 환경에 배포하는 워크플로우를 권장합니다.
+- 모든 Kubernetes manifest 파일은 Git에 저장되어야 합니다. (Helm chart, 외부 서비스는 예외)
+- 민감한 정보는 Sealed Secret을 사용하여 안전하게 관리합니다.
+- 모든 resource는 namespace로 격리합니다. `default` namespace는 사용하지 않습니다.
+
+## Tips
+
+- `alias k=kubectl`을 사용하여 명령어를 간단하게 줄일 수 있습니다.
+- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file)를 사용하면 CTRL+R로 이전에 사용한 명령어를 쉽게 검색할 수 있습니다.
+- Kubernetes 대시보드를 사용하여 클러스터를 더 쉽게 관리할 수 있습니다. 로그 확인이나 pod 내부 터미널 접속 등이 가능합니다.
+- 클러스터에 변경하기 전 Argo CD의 auto-sync를 일시적으로 비활성화하는 것을 권장합니다.

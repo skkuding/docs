@@ -134,10 +134,11 @@ export default defineConfig({
             },
             {
               text: 'Kubernetes',
+              collapsed: false,
               items: [
                 {
-                  text: 'Remote Access',
-                  link: '/dev/infra/k8s/remote-access'
+                  text: 'Getting Started',
+                  link: '/dev/infra/k8s/getting-started'
                 },
                 {
                   text: 'Cluster',
@@ -160,7 +161,7 @@ export default defineConfig({
                   link: '/dev/infra/k8s/secrets'
                 },
                 {
-                  text: 'Argo CD',
+                  text: 'Argo CD (GitOps)',
                   link: '/dev/infra/k8s/argo-cd'
                 },
                 {
