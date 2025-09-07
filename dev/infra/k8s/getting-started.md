@@ -28,7 +28,7 @@ Kubernetes를 처음 접하는 분들에게는 ['쿠버네티스 안내서'](htt
 
 코드당의 Kubernetes 클러스터 운영의 핵심 원칙은 다음과 같습니다.
 
-- 모든 변경 및 새로운 기능은 stage 환경에서 실험하고, prod 환경에 배포하는 워크플로우를 권장합니다.
+- 모든 변경 및 새로운 기능은 stage 환경에서 실험하고, production 환경에 배포하는 워크플로우를 권장합니다.
 - 모든 Kubernetes manifest 파일은 Git에 저장되어야 합니다. (Helm chart, 외부 서비스는 예외)
 - 민감한 정보는 Sealed Secret을 사용하여 안전하게 관리합니다. ([Sealed Secret 페이지 참고](./secrets.md#sealed-secrets))
 - 모든 resource는 namespace로 격리합니다. `default` namespace는 사용하지 않습니다.
