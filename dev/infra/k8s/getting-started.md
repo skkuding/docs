@@ -20,7 +20,9 @@ Kubernetes의 주요 장점은 다음과 같습니다.
 Kubernetes는 매우 방대한 주제이기 때문에, 모든 개념을 이해하기 보다는 필요한 부분만 익히며 점점 지식을 쌓아가는 것을 추천합니다.
 실제로 Kubernetes는 각 기능별로 추상화가 잘 되어있어, 필요한 개념만 이해해도 충분히 활용할 수 있습니다.
 
-Kubernetes를 처음 접하는 분들에게는 ['쿠버네티스 안내서'](https://subicura.com/k8s/)를 먼저 따라가보는 것을 추천합니다.
+아직 Docker와 컨테이너에 익숙하지 않다면, Subicura 님의 ['초보를 위한 도커 안내서'](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)를 먼저 읽어보는 것을 추천합니다. (총 3편)
+
+Kubernetes를 처음 접하는 분들에게는 ['쿠버네티스 안내서'](https://subicura.com/k8s/)를 따라가보며 기초 개념을 쌓는 것을 추천합니다.
 
 ## Core Principles
 
