@@ -3,6 +3,34 @@
 코드당은 Stateless한 서비스들을 동아리 서버 내 Kubernetes 클러스터에 배포하여 운영하고 있습니다.
 Kubernetes의 복잡한 개념과 설정이 처음 접하는 분들에게는 어려울 수 있지만, **'정의된 상태(desired state)를 최대한 유지한다'** 는 Kubernetes의 철학을 이해하면, 조금 더 쉽게 이해할 수 있습니다.
 
+## Why Kubernetes?
+
+코드당은 원래 AWS ECS를 사용하여 서비스를 운영했지만, 비용 절감을 위해 on-premise 서버로 이전하였습니다.
+이 과정에서 여러 대의 서버에서 서비스를 안정적으로 운영하기 위해 Orchestration tool이 필요했고, 그 중 널리 사용되는 Kubernetes를 선택하였습니다.
+Kubernetes의 주요 장점은 다음과 같습니다.
+
+- **Declarative Configuration**: YAML로 리소스를 정의하면 Kubernetes가 알아서 상태를 유지합니다.
+- **GitOps Friendly**: Argo CD와 같은 도구를 사용하여 대부분의 설정을 Git에 저장하고 관리할 수 있습니다. 이를 통해 Pull Request, 리뷰, 변경 history 등 다양한 best practice를 적용할 수 있습니다.
+- **Scalability**: 필요에 따라 쉽게 리소스를 확장하거나 축소할 수 있습니다.
+- **Self-Healing**: 장애가 발생한 pod를 자동으로 재시작하거나 교체합니다.
+- **Ecosystem**: 다양한 오픈소스 도구와 플러그인을 활용할 수 있습니다.
+
+## Learning kubernetes
+
+Kubernetes는 매우 방대한 주제이기 때문에, 모든 개념을 이해하기 보다는 필요한 부분만 익히며 점점 지식을 쌓아가는 것을 추천합니다.
+실제로 Kubernetes는 각 기능별로 추상화가 잘 되어있어, 필요한 개념만 이해해도 충분히 활용할 수 있습니다.
+
+Kubernetes를 처음 접하는 분들에게는 ['쿠버네티스 안내서'](https://subicura.com/k8s/)를 먼저 따라가보는 것을 추천합니다.
+
+## Core Principles
+
+코드당의 Kubernetes 클러스터 운영의 핵심 원칙은 다음과 같습니다.
+
+- 모든 변경 및 새로운 기능은 stage 환경에서 실험하고, prod 환경에 배포하는 워크플로우를 권장합니다.
+- 모든 Kubernetes manifest 파일은 Git에 저장되어야 합니다. (Helm chart, 외부 서비스는 예외)
+- 민감한 정보는 Sealed Secret을 사용하여 안전하게 관리합니다. ([Sealed Secret 페이지 참고](./secrets.md#sealed-secrets))
+- 모든 resource는 namespace로 격리합니다. `default` namespace는 사용하지 않습니다.
+
 ## Remote Access to Kubernetes
 
 원격으로 코드당의 Kubernetes 클러스터에 접근하는 방법을 소개합니다.
@@ -61,15 +89,6 @@ skkuding-4f-2   Ready    control-plane,master   61d   v1.32.5+k3s1
 skkuding-4f-3   Ready    <none>                 60d   v1.32.5+k3s1
 skkuding-4f-4   Ready    <none>                 60d   v1.32.5+k3s1
 ```
-
-## Core Principles
-
-코드당의 Kubernetes 클러스터 운영의 핵심 원칙은 다음과 같습니다.
-
-- 모든 변경 및 새로운 기능은 stage 환경에서 실험하고, prod 환경에 배포하는 워크플로우를 권장합니다.
-- 모든 Kubernetes manifest 파일은 Git에 저장되어야 합니다. (Helm chart, 외부 서비스는 예외)
-- 민감한 정보는 Sealed Secret을 사용하여 안전하게 관리합니다.
-- 모든 resource는 namespace로 격리합니다. `default` namespace는 사용하지 않습니다.
 
 ## Tips
 
