@@ -95,6 +95,7 @@ skkuding-4f-4   Ready    <none>                 60d   v1.32.5+k3s1
 ## Tips
 
 - `alias k=kubectl`을 사용하여 명령어를 간단하게 줄일 수 있습니다.
+- [kubectx와 kubens](https://github.com/ahmetb/kubectx)를 사용하여 context와 namespace를 쉽게 전환할 수 있습니다.
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file)를 사용하면 CTRL+R로 이전에 사용한 명령어를 쉽게 검색할 수 있습니다.
 - Kubernetes 대시보드를 사용하여 클러스터를 더 쉽게 관리할 수 있습니다. 로그 확인이나 pod 내부 터미널 접속 등이 가능합니다.
 - 클러스터에 변경하기 전 Argo CD의 auto-sync를 일시적으로 비활성화하는 것을 권장합니다.
