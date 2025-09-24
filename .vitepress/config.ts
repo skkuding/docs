@@ -169,6 +169,20 @@ export default defineConfig({
                   link: '/dev/infra/k8s/operator'
                 }
               ]
+            },
+            {
+              text: 'AWS & Terraform',
+              collapsed: false,
+              items: [
+                {
+                  text: 'Getting Started',
+                  link: '/dev/infra/aws/getting-started'
+                },
+                {
+                  text: 'OpenVPN',
+                  link: '/dev/infra/aws/openvpn'
+                }
+              ]
             }
           ]
         },
