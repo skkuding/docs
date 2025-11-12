@@ -59,6 +59,12 @@ https://kubernetes.io/ko/docs/tasks/tools
 kubectl konfig import --save config.yaml
 ```
 
+> 중요: kubeconfig가 보관되는 디렉터리(`~/.kube`)가 없으면 명령이 실패할 수 있습니다. 아래 명령으로 디렉터리를 미리 생성하세요.
+
+```
+mkdir -p ~/.kube
+```
+
 ### 4. kubectl context 설정
 
 `kubectl config get-contexts` 명령어를 실행하여 현재 설정된 context를 확인합니다.
