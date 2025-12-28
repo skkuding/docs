@@ -167,7 +167,16 @@ export default defineConfig({
                 {
                   text: 'Operator',
                   link: '/dev/infra/k8s/operator'
+                },
+                {
+                  text: 'Helm Charts',
+                  link: '/dev/infra/k8s/helm-charts'
                 }
+                // TODO
+                // {
+                //   text: 'Monitoring',
+                //   link: '/dev/infra/k8s/monitoring'
+                // }
               ]
             },
             {
