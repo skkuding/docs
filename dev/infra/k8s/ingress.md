@@ -29,8 +29,8 @@ cert-manager는 다양한 CA(Certificate Authority)를 지원하고, 자동 인�
 ClusterIssuer는 cert-manager에서 제공하는 리소스로, namespace 상관 없이 클러스터 전체에서 사용할 수 있습니다.
 코드당에서는 Let's Encrypt에서 TLS 인증서를 발급받으며, 클러스터 별로 두 개의 ClusterIssuer를 구성하고 있습니다.
 
-- `letsencrypt`: http01 challenge를 사용하는 ClusterIssuer로, 대부분의 Ingress에서 사용됩니다.
-- `letsencrypt-dns01`: dns01 challenge를 사용하는 ClusterIssuer로, 와일드카드 도메인에 대해 TLS 인증서를 발급받을 때 사용됩니다. (예: `*.preview.codedang.com`)
+- `letsencrypt-http01`: http01 challenge를 사용하는 ClusterIssuer 입니다. 학교 정책상 80번 포트는 외부에 노출되지 않기 때문에 더이상 사용하지 않습니다.
+- `letsencrypt-dns01`: dns01 challenge를 사용하는 ClusterIssuer로, 와일드카드 도메인에 대해 TLS 인증서를 발급받을 때 사용됩니다. (예: `*.preview.codedang.com`) 현재는 사실상 이 ClusterIssuer만 사용하고 있습니다.
 
 TLS 인증서를 발급 받기 위한 challenge 방식은 크게 http01과 dns01 두 가지가 있습니다.
 
@@ -45,7 +45,7 @@ kind: Ingress
 metadata:
   name: example-ingress
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: letsencrypt-dns01
 spec:
   ingressClassName: traefik
   tls:
