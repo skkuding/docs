@@ -56,6 +56,12 @@ Message queue로는 RabbitMQ를 사용하고 있어요. RabbitMQ는 널리 쓰�
 Iris는 Go 언어로 짜여진 코드 채점 서버예요.
 Message queue를 통해 채점 요청을 받아 코드를 컴파일하고, S3 저장소에서 테스트케이스를 불러오며, sandbox에서 실행한 뒤 결과를 반환해요.
 
+## Plag
+
+Plag는 Iris와 같이 Go 언어로 짜여진 표절 검사 서버예요.
+
+<!-- TODO: 설명 작성 필요 -->
+
 ## Testcase Storage
 
 테스트케이스 저장소는 스테이지 환경에서는 MinIO, 프로덕션 환경에서는 AWS S3를 사용하고 있어요.
