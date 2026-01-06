@@ -77,10 +77,10 @@ CURRENT   NAME    CLUSTER   AUTHINFO     NAMESPACE
           stage   stage     stage-user
 ```
 
-이후 원하는 context를 선택합니다. 예를 들어 prod context를 사용하고 싶다면 아래 명령어를 실행합니다.
+이후 원하는 context를 선택합니다. 예를 들어 stage context를 사용하고 싶다면 아래 명령어를 실행합니다.
 
 ```
-kubectl config use-context prod
+kubectl config use-context stage
 ```
 
 ### 5. VPN 접속 후 kubectl 사용
