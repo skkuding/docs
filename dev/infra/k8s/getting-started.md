@@ -68,13 +68,14 @@ mkdir -p ~/.kube
 ### 4. kubectl context 설정
 
 `kubectl config get-contexts` 명령어를 실행하여 현재 설정된 context를 확인합니다.
-잘 설정되어있다면 prod와 staging 두 개의 context를 볼 수 있습니다. (기존 context가 있다면 추가로 생성됩니다.)
+잘 설정되어있다면 prod와 staging, 그리고 lab이라는 세 개의 context를 볼 수 있습니다. (기존 context가 있다면 추가로 생성됩니다.)
 
 ```
 ❯ kubectl config get-contexts
 CURRENT   NAME    CLUSTER   AUTHINFO     NAMESPACE
-*         prod    prod      prod-user
-          stage   stage     stage-user
+          lab     lab       lab-user     
+          prod    prod      prod-user    
+*         stage   stage     stage-user
 ```
 
 이후 원하는 context를 선택합니다. 예를 들어 stage context를 사용하고 싶다면 아래 명령어를 실행합니다.
