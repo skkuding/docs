@@ -106,6 +106,10 @@ export default defineConfig({
             {
               text: '개발 가이드',
               link: '/dev/backend/'
+            },
+            {
+              text: 'Architecture Decision Records',
+              link: '/dev/backend/architecture/README'
             }
           ]
         },
