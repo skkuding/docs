@@ -3,9 +3,13 @@ title: "ADR NNNN: Short decision title"
 description: "Replace with a one-sentence summary of this backend decision."
 status: proposed
 date: "YYYY-MM-DD"
+# Person responsible for drafting the ADR and coordinating its review.
 owner: "Backend team member"
+# People who participated in making the decision; leave empty while proposed.
 decision_makers: []
+# IDs of older ADRs that this decision replaces, if any.
 supersedes: []
+# ID of a later ADR that replaces this one; set only when superseded.
 superseded_by: null
 ---
 
