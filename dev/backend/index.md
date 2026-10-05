@@ -20,6 +20,8 @@ pnpm start:dev
 NestJS를 중심으로 데이터베이스(PostgreSQL), Redis, S3 저장소, 채점 서버 등 다양한 요소로 구성되어 있어요.
 각 요소들에 대한 설명은 [Architecture 페이지](/dev/project/architecture.md)에서 확인할 수 있어요.
 
+백엔드 팀의 주요 기술 결정과 검토 절차는 [Architecture Decision Records (ADR)](/dev/backend/architecture/README.md)에서 확인할 수 있어요.
+
 여기서는 NestJS 기반의 API 서버를 알아볼게요.
 백엔드 서버는 크게 **Client와 Admin으로 나뉘어져 있어요.**
 
