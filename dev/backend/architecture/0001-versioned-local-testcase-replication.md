@@ -75,7 +75,7 @@ Each judge node will keep a local replica. A miss loads and verifies the request
 - Expected benefit: after a node loads a version, later submissions can reuse it without AWS transfer. Cold misses, node churn, and new versions still incur transfer and preparation delay.
 - Cost: the backend request and testcase publishing flow must change; each node needs storage, integrity checks, lock coordination, GC, and observability.
 - Migration: legacy RDS bodies and existing S3 objects need an explicit read path until converted and verified. The PoC's lack of compatibility must not be carried into production.
-- Before acceptance: compare PV and Silo, both lock APIs, contest warm-up needs, disk limits, legacy migration, and whether a same-version peer-node fallback is worthwhile.
+- Before implementation: compare PV and Silo, both lock APIs, contest warm-up needs, disk limits, legacy migration, and whether a same-version peer-node fallback is worthwhile. Record the production storage and lock choices in a follow-up ADR after the PoC.
 
 ## Verification
 
