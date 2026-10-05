@@ -1,10 +1,10 @@
 ---
 title: "ADR 0001: Versioned local testcase replication for judging"
-description: "Proposed immutable testcase versions and node-local reuse to reduce repeated AWS transfer and keep judging consistent."
-status: proposed
+description: "Immutable testcase versions and node-local reuse to reduce repeated AWS transfer and keep judging consistent."
+status: accepted
 date: "2026-10-05"
 owner: "Lee Haesung"
-decision_makers: []
+decision_makers: ["Lee Haesung"]
 supersedes: []
 superseded_by: null
 implementation_status: not_started
@@ -12,7 +12,7 @@ implementation_status: not_started
 
 # ADR 0001: Versioned local testcase replication for judging
 
-> **Proposed, not implemented.** The backend team has not accepted this ADR. The current testcase loading paths remain in use.
+> **Accepted, not implemented.** This records the architecture decision; implementation has not started, and the current testcase loading paths remain in use.
 
 ## Context and evidence
 
@@ -42,11 +42,11 @@ Repeated testcase retrieval is a **hypothesis**, not a confirmed cause of the tr
 | Keep per-submission S3/RDS reads | No migration | Repeated transfer and the active-set race remain. |
 | Move bodies to S3 but keep per-submission reads | Removes large bodies from RDS | Moves the transfer cost without fixing repeated reads or version consistency. |
 | Use one shared on-premises cache | Downloads each version once for the cluster | Adds a shared bottleneck, failure domain, and network hop for judging. |
-| Pin a version and cache it on each judge node | Warm reads stay local; failures are isolated by node | Duplicates storage and requires local loading, locking, and GC. **Proposed.** |
+| Pin a version and cache it on each judge node | Warm reads stay local; failures are isolated by node | Duplicates storage and requires local loading, locking, and GC. **Selected.** |
 
-Key design choices within the proposed approach:
+Key design choices within the selected approach:
 
-| Choice | Options and tradeoff | Proposed direction |
+| Choice | Options and tradeoff | Decision or open evaluation |
 | --- | --- | --- |
 | Identity | A mutable problem ID is simpler but needs invalidation and can race; a versioned key is stable. | Pin a testcase-set ID and checksum in each judge request. |
 | Artifact | Individual objects permit selective reads but multiply requests; a compressed bundle is easier to verify and replicate. | Compressed S3 bundle, unpacked read-only local copy. |
@@ -55,13 +55,13 @@ Key design choices within the proposed approach:
 | Cleanup | Age-only TTL can evict old problems still in use; LRU needs access tracking. | Capacity-based LRU with in-use protection. |
 | Migration | A one-shot move simplifies reads but raises cutover risk; coexistence adds routing complexity. | PoC may omit legacy support; production needs explicit, staged migration. |
 
-## Proposed decision
+## Decision
 
-If accepted, publish immutable testcase artifacts to S3 and keep metadata plus an active-version pointer in RDS. The backend will choose one version for both result-row creation and the judge request. Iris will execute that version, not look up the currently active set again. Referenced old versions will remain available for pending submissions and rejudging.
+We will publish immutable testcase artifacts to S3 and keep metadata plus an active-version pointer in RDS. The backend will choose one version for both result-row creation and the judge request. Iris will execute that version, not look up the currently active set again. Referenced old versions will remain available for pending submissions and rejudging.
 
 Each judge node will keep a local replica. A miss loads and verifies the requested version before exposing it; a corrupt copy is replaced. If that version cannot be obtained, judging reports a retryable infrastructure failure rather than using another active set.
 
-**Build a node-local TC manager for locks and GC.** Iris holds a lock while accessing testcase data directly from the local PV or Silo. The manager selects eviction candidates and deletes only when no judge is using them. The PoC will compare exposing only a read lock (manager downloads on a miss) with exposing read and write locks (Iris may download under a write lock). The production lock API and storage medium remain undecided.
+**We will build a node-local TC manager for locks and GC.** Iris will hold a lock while accessing testcase data directly from the local PV or Silo. The manager will select eviction candidates and delete only when no judge is using them. The PoC will compare exposing only a read lock (manager downloads on a miss) with exposing read and write locks (Iris may download under a write lock). The production lock API and storage medium remain undecided.
 
 ## Consequences and open work
 
@@ -78,3 +78,4 @@ First verify the suspected source of egress with submission and transfer data. I
 
 - *Reducing Testcase Egress with Versioned Local Replification* (internal research document, September 25, 2026). Its “Final Decision” is a research direction, not deployed behavior.
 - 2026-10-05 — Lee Haesung — Proposed this ADR; implementation has not started.
+- 2026-10-05 — Lee Haesung — Accepted the architecture direction; implementation has not started.
