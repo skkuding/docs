@@ -47,7 +47,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 
 | ADR | Decision | Status |
 | --- | --- | --- |
-| [0001](./0001-versioned-local-testcase-replication.md) | Versioned local testcase replication for judging | `proposed` |
+| [0001](./0001-versioned-local-testcase-replication.md) | Versioned local testcase replication for judging | `accepted` |
 
 ## References
 
