@@ -4,7 +4,14 @@ description: "Immutable testcase versions and node-local reuse to reduce repeate
 status: accepted
 date: "2026-10-05"
 owner: "Lee Haesung"
-decision_makers: ["Lee Haesung"]
+decision_makers:
+  - "Lee Haesung"
+  - "금정빈"
+  - "이유진"
+  - "전유빈"
+  - "이준하"
+  - "송현준"
+  - "조윤상"
 supersedes: []
 superseded_by: null
 implementation_status: not_started
