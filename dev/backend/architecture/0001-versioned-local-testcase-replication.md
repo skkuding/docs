@@ -73,7 +73,8 @@ Each judge node will keep a local replica. A miss loads and verifies the request
 ## Consequences and open work
 
 - Expected benefit: after a node loads a version, later submissions can reuse it without AWS transfer. Cold misses, node churn, and new versions still incur transfer and preparation delay.
-- Cost: the backend request and testcase publishing flow must change; each node needs storage, integrity checks, lock coordination, GC, and observability.
+- Cost: the backend request and testcase publishing flow must change; each node needs storage, integrity checks, and observability.
+- Implementation: build the node-local TC manager for artifact locks and GC, and integrate the download path. With a read-lock-only API the manager downloads; with a read/write-lock API Iris can download under a write lock.
 - Migration: legacy RDS bodies and existing S3 objects need an explicit read path until converted and verified. The PoC's lack of compatibility must not be carried into production.
 - Before implementation: compare PV and Silo, both lock APIs, contest warm-up needs, disk limits, legacy migration, and whether a same-version peer-node fallback is worthwhile. Record the production storage and lock choices in a follow-up ADR after the PoC.
 
