@@ -20,11 +20,11 @@ Start with the next meaningful change. An ADR need not describe every implementa
 
 ## Create a record
 
-1. Copy [template.md](./template.md) to `NNNN-short-decision-title.md` in this directory. Use the next unused four-digit number; keep the filename stable after publication. For example, `0001-use-example-storage.md` is a filename example, not a decision.
+1. Copy [template.md](./template.md) to `NNNN-short-decision-title.md` in this directory. Use the next unused four-digit number; keep the filename stable after publication. For example, `0002-example-decision.md` illustrates the filename format, not an actual decision.
 2. Fill in the YAML properties and replace every placeholder. Give the ADR a concise, action-oriented title. Set `status: proposed`, and identify an owner. Use an ISO 8601 date (`YYYY-MM-DD`).
 3. Describe the problem and constraints, list credible options, and explain why the chosen option best meets the decision drivers. State the decision directly (for example, “We use …”). Record both benefits and costs, including any known risks or migration work.
 4. Open a pull request for backend team review before the decision is implemented or treated as settled. Ask affected stakeholders, including other teams when an interface crosses a team boundary, to review it. Revise the proposal until the backend team accepts or rejects it, and record the reason if rejected.
-5. When the review concludes, set `status: accepted` or `status: rejected`, record the decision date and reviewers or decision makers, and add the ADR to the [decision log](#decision-log) in either case. Keep the rejection reason in a rejected ADR. Link accepted ADRs from relevant implementation or review discussions.
+5. Add the proposal to the [decision log](#decision-log). When the review concludes, set `status: accepted` or `status: rejected`, record the decision date and reviewers or decision makers, and update the log entry. Keep the rejection reason in a rejected ADR. Link accepted ADRs from relevant implementation or review discussions.
 
 Any backend team member can propose an ADR. The owner coordinates feedback and keeps a proposed record current. A useful ADR is short enough to review but detailed enough for a future backend contributor to understand the tradeoffs without replaying the discussion.
 
@@ -47,7 +47,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 
 | ADR | Decision | Status |
 | --- | --- | --- |
-| — | No ADRs have been recorded yet. | — |
+| [0001](./0001-versioned-local-testcase-replication.md) | Versioned local testcase replication for judging | `accepted` |
 
 ## References
 
