@@ -17,9 +17,7 @@ superseded_by: null
 
 The admin GraphQL `Problem.testcase` resolver previously selected `input` and `output` from PostgreSQL for every testcase request, including requests for only IDs, ordering, visibility, or scoring metadata. Large values may be stored out of line with PostgreSQL TOAST, making an unnecessary read and serialization costly.
 
-The [implementation PR](https://github.com/skkuding/codedang/pull/3834) measured one problem with 51 active testcases, including 40 out-of-line inputs and 30 out-of-line outputs. In one PostgreSQL 18.4 `EXPLAIN (ANALYZE, BUFFERS, SERIALIZE TEXT)` comparison, the metadata-only query took 0.152 ms to execute and returned 2 kB, while the query including I/O took 123.564 ms and returned 35,877 kB. These are single-query observations and exclude network transfer; they do not establish a general latency improvement for every problem or page.
-
-The existing frontend `GET_PROBLEM` query still requests both fields, so this backend change alone does not improve that page's initial load.
+The [implementation PR](https://github.com/skkuding/codedang/pull/3834) measured one problem with 51 active testcases, including 40 out-of-line inputs and 30 out-of-line outputs. In one PostgreSQL 18.4 `EXPLAIN (ANALYZE, BUFFERS, SERIALIZE TEXT)` comparison, the metadata-only query took 0.152 ms to execute and returned 2 kB, while the query including I/O took 123.564 ms and returned 35,877 kB. These are single-query observations and exclude network transfer; they do not establish a general latency improvement for every query.
 
 ## Decision drivers
 
@@ -47,7 +45,6 @@ The resolver passes that result to `TestcaseService.getProblemTestcases`. The se
 - Metadata-only callers avoid unnecessary PostgreSQL I/O column reads and serialization.
 - Callers requesting either `input` or `output` still fetch both columns; the query is not optimized per individual I/O field.
 - Selection parsing adds a backend dependency and a small amount of resolver work.
-- Improving the current problem page's initial load requires a frontend query change that stops requesting I/O until it is needed.
 
 ## Verification
 
