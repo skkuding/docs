@@ -49,6 +49,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 | --- | --- | --- |
 | [0001](./0001-versioned-local-testcase-replication.md) | Versioned local testcase replication for judging | `accepted` |
 | [0002](./0002-select-testcase-io-on-demand.md) | Select testcase I/O only when requested | `accepted` |
+| [0003](./0003-node-local-testcase-pv-coordination.md) | Coordinate node-local testcase PV loading and eviction | `proposed` |
 
 ## References
 
