@@ -9,7 +9,7 @@ supersedes: []
 superseded_by: null
 ---
 
-# ADR 0004: Cache versioned testcases in node-local Silo object storage
+# ADR 0006: Cache versioned testcases in node-local Silo object storage
 
 ## Context
 
