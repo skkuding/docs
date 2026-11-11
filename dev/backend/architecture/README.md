@@ -30,12 +30,12 @@ Any backend team member can propose an ADR. The owner coordinates feedback and k
 
 ## Status and changes
 
-| Status | Meaning |
-| --- | --- |
-| `proposed` | Open for review; its content may change. |
-| `accepted` | The backend team adopted the decision. |
-| `rejected` | The backend team considered and declined the proposal; retain the reason. |
-| `superseded` | A later accepted ADR replaces this decision. |
+| Status       | Meaning                                                                   |
+| ------------ | ------------------------------------------------------------------------- |
+| `proposed`   | Open for review; its content may change.                                  |
+| `accepted`   | The backend team adopted the decision.                                    |
+| `rejected`   | The backend team considered and declined the proposal; retain the reason. |
+| `superseded` | A later accepted ADR replaces this decision.                              |
 
 Preserve accepted and rejected records as a history of the backend team's reasoning. If a decision changes, write a new ADR, link both records, and mark the old one `superseded` after the new one is accepted. Updating the old record's status and `superseded_by` property is a bookkeeping exception; do not rewrite its original rationale. Keep a dated change history with the responsible person in the new ADR.
 
@@ -45,12 +45,13 @@ During backend code review, cite the relevant accepted ADR when checking whether
 
 Add each new ADR here in number order. Keep rejected and superseded records visible so earlier reasoning remains discoverable.
 
-| ADR | Decision | Status |
-| --- | --- | --- |
-| [0001](./0001-versioned-local-testcase-replication.md) | Versioned local testcase replication for judging | `accepted` |
-| [0002](./0002-select-testcase-io-on-demand.md) | Select testcase I/O only when requested | `accepted` |
-| [0003](./0003-node-local-testcase-pv-coordination.md) | Coordinate node-local testcase PV loading and eviction | `proposed` |
-| [0005](./0005-node-local-pv-testcase-cache-poc.md) | Implement the node-local PV testcase cache PoC | `proposed` |
+| ADR                                                            | Decision                                                    | Status     |
+| -------------------------------------------------------------- | ----------------------------------------------------------- | ---------- |
+| [0001](./0001-versioned-local-testcase-replication.md)         | Versioned local testcase replication for judging            | `accepted` |
+| [0002](./0002-select-testcase-io-on-demand.md)                 | Select testcase I/O only when requested                     | `accepted` |
+| [0003](./0003-node-local-testcase-pv-coordination.md)          | Coordinate node-local testcase PV loading and eviction      | `proposed` |
+| [0005](./0005-node-local-pv-testcase-cache-poc.md)             | Implement the node-local PV testcase cache PoC              | `proposed` |
+| [0006](./0006-cache-versioned-testcases-in-node-local-silo.md) | Cache versioned testcases in node-local Silo object storage | `proposed` |
 
 ## References
 
