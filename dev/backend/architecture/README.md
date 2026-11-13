@@ -50,7 +50,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 | [0001](./0001-versioned-local-testcase-replication.md)         | Versioned local testcase replication for judging            | `accepted` |
 | [0002](./0002-select-testcase-io-on-demand.md)                 | Select testcase I/O only when requested                     | `accepted` |
 | [0003](./0003-node-local-testcase-pv-coordination.md)          | Coordinate node-local testcase PV loading and eviction      | `proposed` |
-| [0005](./0005-node-local-pv-testcase-cache-poc.md)             | Implement the node-local PV testcase cache PoC              | `proposed` |
+| [0005](./0005-node-local-pv-testcase-cache-poc.md)             | Cache immutable testcase manifests and bundles on a node-local PV              | `proposed` |
 | [0006](./0006-cache-versioned-testcases-in-node-local-silo.md) | Cache versioned testcases in node-local Silo object storage | `proposed` |
 
 ## References
