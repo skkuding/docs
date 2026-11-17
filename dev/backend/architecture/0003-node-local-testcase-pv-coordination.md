@@ -1,12 +1,12 @@
 ---
 title: "ADR 0003: Coordinate node-local testcase PV loading and eviction"
 description: "Give each node-local testcase cache one owner for concurrent loads, Iris-owned testcase descriptors, and capacity-based GC."
-status: proposed
+status: superseded
 date: "2026-11-04"
 owner: "Backend team"
 decision_makers: []
 supersedes: []
-superseded_by: null
+superseded_by: "0008"
 ---
 
 # ADR 0003: Coordinate node-local testcase PV loading and eviction

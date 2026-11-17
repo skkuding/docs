@@ -1,5 +1,5 @@
 ---
-title: "ADR 0008: Adopt Polygon-style Mandeuldang for problem authoring"
+title: "ADR 0009: Adopt Polygon-style Mandeuldang for problem authoring"
 description: "Keep the existing problem authoring flow and add Mandeuldang, where authors upload a Generator, Validator, and Solution, Iris generates and validates testcases, and Owner, Editor, and Reviewer roles collaborate on one problem."
 status: proposed
 date: "2026-11-17"
@@ -9,7 +9,7 @@ supersedes: []
 superseded_by: null
 ---
 
-# ADR 0008: Adopt Polygon-style Mandeuldang for problem authoring
+# ADR 0009: Adopt Polygon-style Mandeuldang for problem authoring
 
 We keep the existing problem authoring flow and add Mandeuldang. Authors upload a Generator, Validator, and Solution, and Iris generates and validates the testcases. Several people build one problem together with Owner, Editor, and Reviewer roles.
 
