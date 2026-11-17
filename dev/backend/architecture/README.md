@@ -53,6 +53,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 | [0005](./0005-node-local-pv-testcase-cache-poc.md)             | Cache immutable testcase manifests and bundles on a node-local PV              | `proposed` |
 | [0006](./0006-cache-versioned-testcases-in-node-local-silo.md) | Cache versioned testcases in node-local Silo object storage | `proposed` |
 | [0007](./0007-adapt-iris-judge-concurrency.md)                  | Adapt Iris judge concurrency to node contention             | `proposed` |
+| [0008](./0008-adopt-mandeuldang-for-problem-authoring.md)       | Adopt Polygon-style Mandeuldang for problem authoring       | `proposed` |
 
 ## References
 
