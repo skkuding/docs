@@ -53,7 +53,6 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 | [0005](./0005-node-local-pv-testcase-cache-poc.md)             | Cache immutable testcase manifests and bundles on a node-local PV              | `superseded` |
 | [0006](./0006-cache-versioned-testcases-in-node-local-silo.md) | Cache versioned testcases in node-local Silo object storage | `proposed` |
 | [0007](./0007-adapt-iris-judge-concurrency.md)                  | Build Iris 2.0 as a standalone judge service and validate execution control | `proposed` |
-
 | [0008](./0008-integrate-iris-with-node-local-testcase-cache-manager.md) | Integrate Iris with a node-local testcase cache manager | `accepted` |
 
 ## References
