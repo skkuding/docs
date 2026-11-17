@@ -8,12 +8,12 @@ decision_makers:
   - "Lee Haesung"
 supersedes: ["0003", "0005"]
 superseded_by: null
-implementation_status: not_completed
+implementation_status: integrated_poc
 ---
 
 # ADR 0008: Integrate Iris with a node-local testcase cache manager
 
-> Accepted design; integration and deployment verification are not complete. Acceptance does not claim deployed behavior or measured savings.
+> At acceptance, integration and deployment verification were not complete. The dated implementation evidence below records subsequent PoC verification; this does not claim production rollout or measured savings.
 
 ## Context
 
@@ -65,3 +65,5 @@ Run Manager artifact/install/GC tests and Iris FD/client tests, including race d
 - [Silo alternative ADR 0006](./0006-cache-versioned-testcases-in-node-local-silo.md)
 - [PV PoC PR #1](https://github.com/skkuding/tc-local-caching/pull/1)
 - 2026-11-17 — Lee Haesung — Accepted the integration design and replacement of ADRs 0003 and 0005; implementation remains incomplete.
+
+- 2026-11-17 — Lee Haesung — Integrated Manager-owned PV artifacts and Iris-owned FD consumption in tc-local-caching (local commits `3eba4e0f`, `c865c35c`, `cabeedee`). Manager and Iris FD tests passed Linux race checks. Actual C judging passed in Compose with a Silo origin and in separate same-node kind Pods with a dedicated ext4 local PV. Removing the origin and recreating both Pods preserved all verdict checks with zero new bundle downloads. Evidence and reproduction limits are recorded in `apps/tc-local-caching/VERIFICATION.md`; RabbitMQ/PostgreSQL transport and the full service startup remain outside these checks.
