@@ -1,6 +1,6 @@
 ---
-title: "ADR 0007: Build Iris 2.0 as a standalone judge service with adaptive admission"
-description: "Start a new judge service with a single complete request and supplied testcases, then validate concurrent execution, adaptive admission, and remote coordination in stages."
+title: "ADR 0007: Build Iris 2.0 as a standalone judge service and validate execution control"
+description: "Build a standalone judging core, establish its capacity and reproducibility, and compare fixed and observation-driven admission before distributed integration."
 status: proposed
 date: "2026-11-14"
 owner: "Lee Haesung"
@@ -9,136 +9,75 @@ supersedes: []
 superseded_by: null
 ---
 
-# ADR 0007: Build Iris 2.0 as a standalone judge service with adaptive admission
-
-## Context
-
-Jobs sharing CPU cores, last-level cache (LLC), memory controllers, and bandwidth can change each other's measured execution time. Cache evictions and memory stalls can shift CPU time, while scheduler wait can increase elapsed time. A verdict near a time limit can therefore depend on neighboring work. The Wave 1 direct Judger reproduction observed higher CPU and elapsed times as concurrency increased for a fixed fixture. Safe operating limits and production verdict effects still need validation. [Wave 1 comparison](https://github.com/skkuding/iris-load-test-toolset/blob/dcff9a9/docs/WAVE1-COMPARISON.md)
-
-Compute-heavy programs can leave shared memory resources available, while memory-heavy programs at the same concurrency can cause cache or bandwidth contention. A fixed cap safe for a demanding mix can leave usable capacity idle during other mixes. We need to evaluate whether observation-driven admission improves throughput at the same execution-time and verdict-reproducibility targets.
-
-**Assume no prior knowledge of a user's CPU or memory access pattern.** A program can change phases or behave differently on the next input. Memory usage in bytes does not establish memory traffic per second. Estimates need evaluation on first-seen programs and phase changes.
-
-Iris 2.0 is a new service design. Its execution contract, admission policy, and eventual CP/worker boundary need independent validation. A small judging MVP can establish this foundation using a fully prepared request whose testcase data has already been retrieved by the caller. Compilation, tests, and other services remain potential interference sources to evaluate as execution concurrency grows.
-
-## Decision drivers
-
-- Establish a correct, runnable judging path before adding resource control or distributed coordination.
-- Preserve repeatable resource measurements and near-limit verdicts under changing load.
-- Use available capacity without requiring prior classification of user programs.
-- Keep each development step independently runnable and measurable.
-- Compare throughput, waiting time, and placement cost at the same accuracy target.
-
-## Considered options
-
-| Service approach | Benefit | Cost or limitation |
-| --- | --- | --- |
-| Incrementally restructure the existing Iris service | Can reuse its integrated request and data paths | Couples the new design experiments to changes in the existing service. |
-| Build the full CP, workers, storage, and transport together | Exercises the intended end-to-end architecture | Introduces several failure sources before the judging core has a baseline. |
-| Build a standalone judging MVP and expand it in stages | Establishes a small execution contract and isolates the effect of each added mechanism | Production integration and migration require later work. **Proposed.** |
-
-For concurrency, compare a conservative fixed cap, a higher fixed cap, and observation-driven admission under a fixed execution profile. Use fixed caps as experimental baselines before deciding on adaptive policy.
+# ADR 0007: Build Iris 2.0 as a standalone judge service and validate execution control
 
 ## Decision
 
-Develop **Iris 2.0 as a new standalone judge service**, starting with one complete judging request. The caller supplies the code or prepared executable, language/runtime configuration, limits, and testcase input and expected-output data. The MVP executes the supplied work and returns structured results. Existing sandbox libraries, result semantics, and useful components can be reused where suitable.
+**Build Iris 2.0 as a new standalone judge service. Establish a single-execution baseline, then compare fixed concurrency and observation-driven admission to find a policy that achieves both judge reproducibility and useful throughput.**
 
-Expand that runnable core through fixed concurrent execution, observation-driven admission, and then a Kubernetes CP with remote execution workers. Validate each addition against the preceding baseline. Choose production transport, storage, and migration after the execution design has evidence.
+The execution control and instrumentation we need require structural changes to the existing Iris service. We choose to design the execution boundary in a separate service and reuse useful existing components.
 
-Keep the execution profile fixed across workload mixes, including physical CPU placement, SMT and clock policy, NUMA allocation, and any CAT allocation. Profile changes require a drained worker and a separate baseline. Admission changes when new jobs may start. Goroutines manage admitted subprocesses, and an execution slot stays occupied until its subprocess exits.
+To support the current multi-host environment and future growth, use a central control plane (CP) and remote execution workers. Keep the CP in Kubernetes and run the workers outside the general backend Kubernetes worker pool. Validate locally before adding distributed coordination so the effects of execution policy can be evaluated independently.
 
-## Implementation sequence
+This ADR sets the development direction and experimental sequence. **Adoption of dynamic control and the final concurrency limits will be decided from experimental results.**
 
-### Step 1 — Judge one fully prepared request
+## Context
 
-Expose a minimal entry point that accepts one self-contained request. It includes a request identifier, submitted code or an executable artifact, the language/runtime configuration, time and memory limits, the supplied testcase inputs and expected outputs, and the output-comparison rule. Testcase bodies can be carried directly or supplied as already-readable local artifacts. The caller has completed testcase selection and retrieval before invocation.
+**The judge service must provide consistent verdicts for the same submission while sustaining sufficient throughput.** Higher concurrency can improve throughput, but shared-resource contention can shift execution times and change near-limit verdicts. Conservative limits can leave capacity idle and increase waiting time.
 
-Handle one request at a time. For source submissions, perform the minimal build preparation required for that request and record build failure separately. Run the executable in the sandbox against each supplied testcase, collect CPU time, elapsed time, memory, exit state, and output, and return testcase results with a request summary. Clean up request-owned temporary artifacts after their use. Keep build preparation and waiting time separate from measured execution.
+The Wave 1 experiment observed higher CPU and elapsed times for the same program and input as concurrency increased. Even CPU-time-based judging must account for interference through shared caches and memory bandwidth. [Wave 1 comparison](https://github.com/skkuding/iris-load-test-toolset/blob/dcff9a9/docs/WAVE1-COMPARISON.md)
 
-Use a local test harness and supplied fixtures to demonstrate a complete request-to-result path. Verify output comparison, limits, runtime errors, build errors where applicable, and cleanup. This MVP establishes functional correctness and isolated execution measurements with the supplied data. Its deliverable is a runnable judging core that can be exercised independently of the existing service's request transport and testcase storage.
+Interference can depend on the workload mix. A fixed cap chosen for a demanding mix may underuse capacity during other mixes. Observation-driven admission is a candidate for using that headroom, but delayed observations and execution-phase changes can undermine it. It needs comparison with fixed limits.
 
-### Step 2 — Add fixed concurrent execution and measurement
+Assume no prior knowledge of a user's CPU or memory access pattern. Runtime observations can inform admission, while future demand and phase changes remain unknown. Distinguish measured judging from compilation and tests, and include their interference when they share hardware.
 
-Allow several complete requests through a bounded local worker interface. Count actual subprocess execution, including parallel build work if introduced. Track active jobs, waiting time, build time, sandbox measurements, and completion or error state. Verify that sandbox processes stay inside the intended CPU and resource boundaries.
+We currently lack a validated concurrency range that preserves reproducibility for the workloads and host configurations we intend to support. **The first experimental objective is to characterize capacity and interference.**
 
-Use an available judge-only physical host as the initial bare-metal reference. Compare isolated runs with fixed caps under compute-, cache-, latency-, and bandwidth-heavy mixes. Add real compilation and test workloads as external interference. Obtain a conservative fixed cap and quantify throughput and time drift before adding feedback control. Evaluate partitioned sharing separately if dedicated capacity has unacceptable cost or insufficient availability.
+## Alternatives and rationale
 
-### Step 3 — Add observation-driven admission
+| Question | Alternatives | Choice and rationale |
+| --- | --- | --- |
+| Development base | Modify existing Iris / build a new service | Build a new service because execution control and instrumentation require structural changes. |
+| Validation sequence | Build the full distributed system together / validate locally before expansion | Expand in stages to distinguish execution-policy effects from remote job management. |
+| Execution policy | Fixed limits / observation-driven admission | Compare under the same conditions before selecting a policy. |
 
-Use the same local worker interface to adjust the maximum running job count. Start from the validated fixed cap. Increase the target gradually after sustained low pressure and reduce new starts after sustained contention. Running jobs drain when the target falls below the active count. Calibrate sampling periods, recovery windows, and thresholds on each host configuration.
+## Validation stages
 
-Collect timestamped LLC occupancy, MBM traffic where available, scheduler pressure, memory availability, and execution variability. Memory capacity estimates support reservation and exhaustion prevention. Bandwidth observations indicate memory traffic pressure. Interpret LLC occupancy with misses and timing evidence. Start with aggregate runtime observations and conservative ceilings, and evaluate per-program predictors separately. [Linux resctrl](https://docs.kernel.org/filesystems/resctrl.html), [scheduler statistics](https://docs.kernel.org/scheduler/sched-stats.html)
+| Stage | Main question | Deliverable |
+| --- | --- | --- |
+| 1. Single execution | Can one complete request be judged correctly, and how stable are repeated measurements? | A functionally verified execution core and an isolated-execution baseline. |
+| 2. Fixed concurrent execution | What concurrency range preserves reproducibility for each workload mix? | The relationship between concurrency, reproducibility, throughput, and waiting time. |
+| 3. Observation-driven control | Can more capacity be used than with fixed limits at the same reproducibility level? | A decision on whether and under what conditions to adopt dynamic control. |
+| 4. Distributed control | Can execution policy and job state be managed consistently across physical hosts? | A CP/remote-worker design and failure-recovery validation results. |
 
-codedang8's reported E5-2620 v4 CPU flags include CAT and MBM, with MBA absent. Fixed CAT allocation can separate cache allocation between groups. Include the host default group's mask when qualifying isolation. Jobs sharing a socket still share memory bandwidth, so include colocated compilation and test activity in the admission policy.
+The initial execution core receives a complete request containing code or an executable, execution limits, testcase data, and the other information needed to judge it, then returns results. The caller has already retrieved the testcases. Integration with production transport and storage comes later.
 
-When metrics are stale or unavailable, stop increasing admission and use a validated conservative mode. Pause new execution if the worker cannot maintain that mode. A phase change inside a running job can cause interference before the controller responds. Measure that exposure explicitly.
+Keep the execution environment fixed within each comparison and use the preceding stage's baseline. Include compute-heavy and memory-heavy programs, mixed loads, abrupt phase changes, and interference from compilation and tests. Start with a controlled reference host and evaluate shared-host placement separately when needed. Each worker enforces its running-job limit and retains the execution slot until the subprocess exits.
 
-### Step 4 — Introduce the Kubernetes CP and RPC workers
+## Evaluation and follow-up decisions
 
-Run the new service's control plane (CP) in the existing Kubernetes environment. Run execution workers outside the general backend Kubernetes worker pool, initially on qualified physical hosts. The CP can reside on another physical server. It accepts work, tracks capacity, selects workers, sets per-worker running-job limits, and collects results. Workers enforce actual execution limits.
+First measure natural variation in isolated execution and the behavior of fixed concurrent execution. Use these observations together with operational requirements to define acceptable bounds, and state them before comparing subsequent policies.
 
-A host agent reports hardware observations with measurement intervals, attribution, and freshness. The CP considers shared LLC and memory domains across workers on a host. Use RPC for execution and job-state reconciliation. A worker can later run inside a VM through the same execution interface.
+The main metrics are execution-time distributions, near-limit verdict agreement, throughput, and waiting time. Include instrumentation and control overhead, both fast and slow timing tails, and failed attempts.
 
-Keep one effective capacity budget per worker across CP replicas and restarts. An RPC timeout can leave a job running, so reconcile worker state before releasing its slot or retrying. Define artifact transfer and lifetime when separating build and judge pools. The MVP's supplied-testcase contract provides an execution boundary for later integration with testcase providers.
+- Adopt dynamic control where it provides a benefit at the same reproducibility level.
+- Retain a fixed policy where a fixed cap is sufficient or dynamic control costs more than it gains.
+- Evaluate resource isolation and additional regulation if neither policy adequately controls interference.
 
-### Workload policy as the service expands
+For distributed validation, include delayed or lost observations, CP/worker restarts, and RPC retries. An RPC timeout can leave a job running, so reconcile worker state before freeing capacity or retrying execution.
 
-Submission and rejudge execution share accuracy-oriented admission. Compilation and test execution have separate bounded budgets, and their interference is included when they share hardware with judging. Test-request integration should respect the existing positive time and memory limits. Validate compatibility at the integration stage. [Existing test model](https://github.com/skkuding/codedang/blob/2528d9cc1/apps/iris/src/handler/run/models.go)
+## Consequences and follow-up scope
 
-## Consequences
+A new service lets us validate execution policy independently, but requires compatibility evaluation and migration from the existing Iris service. Execution limits for reproducibility can increase waiting time. Distributed control adds job-state reconciliation and recovery work.
 
-- The first deliverable can demonstrate judging correctness with caller-supplied data. Each later mechanism has a working baseline for comparison.
-- A new service requires explicit production integration, compatibility evaluation, and migration planning. Successful local experiments alone establish neither production readiness nor safe replacement of the existing Iris service.
-- Dedicated physical capacity simplifies the initial interference baseline. Reserving headroom can increase idle cost, and host provisioning affects scale-out readiness. Existing spare hosts, peak demand, and waiting-time targets determine the actual tradeoff.
-- Controlled sharing can improve utilization but requires interference policy and mixed-load validation. Include background services, compilation, tests, and collectors.
-- Saturation increases waiting time. Judge reproducibility and end-to-end latency need separate targets.
-- Remote coordination adds job-state reconciliation and recovery work after local execution and admission have been evaluated.
+Choose production transport and storage, VM placement, additional bandwidth regulation, and testcase-level dispatch separately, using the requirements and limits found in these experiments. For placement, compare dedicated physical capacity with controlled sharing at the same accuracy target, including idle cost and scale-out readiness.
 
-## Future work
-
-### Production integration and durable job transport
-
-After validating the execution design, define how backend requests and testcase providers supply the complete judging contract. Evaluate compatibility for supported languages, judging modes, limits, result fields, and cancellation. Plan how to route work between the existing service and Iris 2.0, reconcile in-flight jobs and results, and roll back a transition.
-
-A centralized CP can use a durable database job table and RPC dispatch. Evaluate PostgreSQL polling against RabbitMQ for pickup latency, idle and burst DB load, fairness, and recovery. Creating a job in the submission transaction could simplify the DB-to-broker handoff. A bounded claim transaction using `FOR UPDATE SKIP LOCKED` is a candidate. [PostgreSQL locking clauses](https://www.postgresql.org/docs/current/sql-select.html#SQL-FOR-UPDATE-SHARE)
-
-Retain pending work across CP failure and define ownership, lease recovery, attempts, cancellation, and idempotent results. Lease expiry can coexist with a still-running job, requiring worker reconciliation and stale-completion checks. Select transport after comparing behavior and operational cost. Define migration for request producers, pending work, and result consumers.
-
-### VM isolation and hypervisor choice
-
-Compare the qualified bare-metal layout with judge and compile/test VM workers after establishing the execution and admission baselines. The CP remains in Kubernetes and uses RPC in each case. VM workers run outside the general backend Kubernetes worker pool. Hold CPU, NUMA, clock, CAT, and memory-backing profiles fixed within each comparison and include artifact-transfer costs.
-
-VM deployment can reuse a shared host pool and simplify some lifecycle operations, but host contention, reserved resources, image startup, and warm-up affect usable capacity. Compare cost per completed job at the same accuracy target and scale-out readiness with dedicated physical capacity.
-
-KVM is an initial candidate because the existing experiments and Linux host tools can be reused. Host-local collection remains useful with a remote CP. Compare Xen's CPU pools and resource controls if host scheduling interference remains material. Evaluate observation quality, collector overhead, maintenance effort, near-limit verdicts, and throughput. codedang8's MBA limitation applies to both. [KVM tracing](https://www.linux-kvm.org/page/Perf_events), [libvirt configuration](https://libvirt.org/formatdomain.html), [Xen controls](https://xenbits.xenproject.org/docs/4.19-testing/man/xl.1.html)
-
-### Local bandwidth regulation and workload models
-
-If admission alone leaves unacceptable burst interference, evaluate MemGuard-style local regulation first against compilation and test aggressors. Study budget enforcement, PMU event coverage, writes and prefetch traffic, guest accounting when using VMs, and interrupt or throttling overhead on the actual CPU and kernel. Keep reservation, reclaim, and sharing modes as separate experiments. Fixed regulation of measured judging needs its own isolated reference profile. [MemGuard, RTAS 2013](https://ittc.ku.edu/~heechul/papers/memguard-rtas13.pdf), [author implementation](https://github.com/heechul/memguard)
-
-An eBPF instrumentation and sched_ext regulator is another experimental candidate. Check kernel configuration, permitted execution contexts, preemption and replenishment, and failure fallback before claiming bounded bandwidth enforcement. Evaluate this low-level mechanism after the admission experiments. [Linux sched_ext](https://docs.kernel.org/scheduler/sched-ext.html)
-
-Use Bubble-Up's pressure/sensitivity methodology for offline interference tests. Consider Paragon-inspired runtime models after collecting representative observations, with unseen programs and phase changes held out for evaluation. Prior knowledge of user access patterns is unavailable. [Bubble-Up, MICRO 2011](https://www.cs.virginia.edu/~skadron/Papers/mars_micro2011.pdf), [Paragon, ASPLOS 2013](https://csl.stanford.edu/~christos/publications/2013.paragon.asplos.pdf)
-
-### Testcase dispatch and storage
-
-Later split submission execution into testcase-level jobs, defining build reuse, aggregation, retries, and `StopOnNotAccepted` semantics. Evaluate a Longhorn-backed shared filesystem for artifact delivery, timing impact, and interaction with immutable version pinning and local cache ownership. Production cache selection remains open between PV and Silo proposals. Integrate the selected provider with the complete-request execution contract. [ADR 0001](./0001-versioned-local-testcase-replication.md), [ADR 0003](./0003-node-local-testcase-pv-coordination.md), [PV PoC](./0005-node-local-pv-testcase-cache-poc.md), [Silo PoC](./0006-cache-versioned-testcases-in-node-local-silo.md)
-
-## Verification
-
-- Step 1 accepts a fully supplied request and returns correct testcase results and a request summary. Exercise accepted and wrong outputs, limits, runtime errors, applicable build errors, and temporary-artifact cleanup.
-- Step 2 holds the execution profile fixed and compares isolated execution with fixed concurrent caps. Include normal request preparation and external compilation or tests after isolating execution effects.
-- Step 3 compares observation-driven admission against the fixed-cap baselines at the same accuracy target. Give the controller only normal metadata and runtime observations. Keep workload labels, future phases, and isolated reference times in the evaluator.
-- Include first-seen programs, equal-memory/different-bandwidth pairs, abrupt phase changes, short bursts, and changing testcase behavior. Report CPU and elapsed-time distributions, both tails, near-limit verdict agreement, and all failed or contaminated attempts. Measure throughput and waiting time.
-- Exercise collector overhead, stale metrics, shrinking limits, cancellation, concurrent starts, and confirmed process exit before slot release. In Step 4 add RPC loss, partial results, CP/worker restarts, and multiple CP replicas.
-- Evaluate future placement, transport, and regulation work against its own accuracy, cost, and recovery questions. Agree on acceptance thresholds before each evaluation.
+Future work can compare a durable DB job table and polling with RabbitMQ once the CP's intake and recovery requirements are clear. It can also compare bare-metal workers with KVM or Xen, investigate MemGuard or eBPF/sched_ext regulation if burst interference remains, and evaluate Longhorn or testcase-level scheduling where the execution model calls for them. These mechanisms are follow-up candidates whose adoption depends on measured needs.
 
 ## Links and change history
 
 - [Host-direct CAT experiment](https://github.com/skkuding/iris-load-test-toolset/blob/5ed7488/docs/CAT-DIRECT-AB.md)
-- [Full Iris and RabbitMQ benchmark](https://github.com/skkuding/iris-load-test-toolset/blob/dcff9a9/docs/FULL-IRIS-EXTERNAL.md)
-- 2026-11-14 — Lee Haesung — Proposed node-local adaptive concurrency for Iris.
-- 2026-11-17 — Lee Haesung — Revised the proposal to a Kubernetes CP and RPC VM workers, with CP-managed VM concurrency, fixed CAT allocation, and application-level bandwidth admission on codedang8.
-- 2026-11-17 — Lee Haesung — Revised the proposed implementation sequence to measurement, local admission, and remote CP coordination. Added bare-metal placement as the initial baseline and deferred VM selection, database polling, low-level regulation, and workload models to measured follow-up work.
-- 2026-11-17 — Lee Haesung — Focused context and options on the admission decision, separated the rollout sequence, and condensed transport and infrastructure follow-up work.
-- 2026-11-17 — Lee Haesung — Reframed Iris 2.0 as a new standalone service. Added a single-request judging MVP with caller-supplied testcases before concurrency, adaptive admission, and CP/worker distribution.
+- [Full Iris benchmark](https://github.com/skkuding/iris-load-test-toolset/blob/dcff9a9/docs/FULL-IRIS-EXTERNAL.md)
+- 2026-11-14 — Lee Haesung — Proposed an investigation of judge concurrency and shared-resource interference.
+- 2026-11-17 — Lee Haesung — Revised the proposal through CP/worker and placement discussions, then selected a standalone single-request MVP as the starting point.
+- 2026-11-17 — Lee Haesung — Consolidated the ADR around the development direction, four validation stages, and experiment-dependent policy selection.
