@@ -1,12 +1,12 @@
 ---
 title: "ADR 0005: Cache immutable testcase manifests and bundles on a node-local PV"
 description: "Use immutable manifests and verified compressed bundles with a persistent local cache to preserve testcase versions and avoid repeated reads from S3."
-status: proposed
+status: superseded
 date: "2026-11-13"
 owner: "Backend team"
 decision_makers: []
 supersedes: []
-superseded_by: null
+superseded_by: "0008"
 ---
 
 # ADR 0005: Cache immutable testcase manifests and bundles on a node-local PV
