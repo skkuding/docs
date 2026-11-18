@@ -54,6 +54,7 @@ Add each new ADR here in number order. Keep rejected and superseded records visi
 | [0006](./0006-cache-versioned-testcases-in-node-local-silo.md) | Cache versioned testcases in node-local Silo object storage | `proposed` |
 | [0007](./0007-adapt-iris-judge-concurrency.md)                  | Build Iris 2.0 as a standalone judge service and validate execution control | `proposed` |
 | [0008](./0008-integrate-iris-with-node-local-testcase-cache-manager.md) | Integrate Iris with a node-local testcase cache manager | `accepted` |
+| [0009](./0009-adopt-mandeuldang-for-problem-authoring.md)       | Adopt Polygon-style Mandeuldang for problem authoring       | `proposed` |
 
 ## References
 
