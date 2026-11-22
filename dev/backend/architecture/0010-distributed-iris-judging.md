@@ -1,6 +1,6 @@
 ---
-title: "ADR 0010: Distribute Iris judging by testcase"
-description: "Run distributed testcase-level judging with PostgreSQL polling, separate worker pools, central build artifact storage, and node-local filesystem caches."
+title: "ADR 0010: Distribute Iris judging with contention-aware testcase scheduling"
+description: "Use host pressure metrics to schedule testcases across judge nodes, with PostgreSQL polling, separate worker pools, and node-local filesystem caches."
 status: proposed
 date: "2026-11-22"
 owner: "Lee Haesung"
@@ -9,7 +9,7 @@ supersedes: ["0007"]
 superseded_by: null
 ---
 
-# ADR 0010: Distribute Iris judging by testcase
+# ADR 0010: Distribute Iris judging with contention-aware testcase scheduling
 
 ## Context
 
