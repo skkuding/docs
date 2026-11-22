@@ -11,6 +11,8 @@ superseded_by: null
 
 # ADR 0007: Build Iris 2.0 as a standalone judge service and validate execution control
 
+> [ADR 0010](./0010-distributed-iris-judging.md) proposes replacing this ADR with the distributed prototype design.
+
 ## Context
 
 The judge service must provide consistent verdicts for the same submission while sustaining sufficient throughput. Higher concurrency can improve throughput, but shared-resource contention can shift execution times and change near-limit verdicts. Conservative limits can leave capacity idle and increase waiting time.
