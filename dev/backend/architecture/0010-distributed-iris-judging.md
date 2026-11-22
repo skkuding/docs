@@ -1,5 +1,5 @@
 ---
-title: "ADR 0010: Scale Iris build and judge workers independently"
+title: "ADR 0010: Distribute Iris judging by testcase"
 description: "Run distributed testcase-level judging with PostgreSQL polling, separate worker pools, central build artifact storage, and node-local filesystem caches."
 status: proposed
 date: "2026-11-22"
@@ -9,7 +9,7 @@ supersedes: ["0007"]
 superseded_by: null
 ---
 
-# ADR 0010: Scale Iris build and judge workers independently
+# ADR 0010: Distribute Iris judging by testcase
 
 ## Context
 
